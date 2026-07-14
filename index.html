@@ -94,7 +94,7 @@ html, body { margin:0; padding:0; background:var(--dd-bg); font-family:'Futura P
 .plat-chip-dot { width:7px; height:7px; border-radius:50%; }
 
 /* PLATFORM CARDS */
-.platform-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(255px,1fr)); gap:16px; margin-bottom:28px; }
+.platform-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:28px; }
 .platform-card { background:var(--dd-white); border:1px solid var(--dd-border); border-radius:14px; overflow:hidden; transition:box-shadow .15s; }
 .platform-card:hover { box-shadow:0 4px 20px rgba(0,19,56,.09); }
 .card-header { color:#fff; padding:13px 16px; display:flex; align-items:center; gap:10px; }
@@ -253,8 +253,8 @@ footer strong { color:var(--dd-muted); }
       <span class="plat-chip" style="background:#FFF7ED;color:#C2410C;"><span class="plat-chip-dot" style="background:#FF6C00"></span>Off Story · May 27 – July 12</span>
     </div>
     <div class="narrative-body">
-      <p>The Dippin' Dots Spring/Summer 2026 paid media campaign is pacing well through ten-plus weeks in market. Data reflects May 1 – July 12, 2026.</p>
-      <p><strong>Meta continues to deliver standout efficiency.</strong> The Engagement campaign has generated <span class="hl-green">33,077 post engagements</span> at a <span class="hl-green">$0.13 CPE</span> with a <span class="hl-green">17.74% engagement rate</span> — well above benchmarks for the category. The Traffic/Retargeting campaign has driven <span class="hl-green">12,077 landing page views</span> at just <span class="hl-green">$0.17 per visit</span> — Frequency is at 1.91–2.31 across the two campaigns, well within healthy range.</p>
+      <p><strong>Retail data confirms the story building at the platform level.</strong> Weekly velocity has grown <span class="hl-green">35% since the first full post-launch read</span> (May 17 → June 14), and Experian Mosaic segmentation shows our targeted audience — <span class="hl-green">"Families in Motion," indexing at 189</span> — is in fact the top-buying household segment at retail, validating both media efficiency and targeting strategy.</p>
+      <p><strong>Meta continues to deliver standout efficiency.</strong> The Engagement campaign has generated <span class="hl-green">33,077 post engagements</span> at a <span class="hl-green">$0.13 CPE</span> with a <span class="hl-green">17.74% engagement rate</span>. The Traffic/Retargeting campaign has driven <span class="hl-green">12,077 landing page views</span> at just <span class="hl-green">$0.17 per visit</span> — Frequency is at 1.91–2.31 across the two campaigns, well within healthy range.</p>
       <p><strong>TikTok has now surpassed 3M impressions</strong> at a sustained <span class="hl-green">$1.78 CPM</span> — less than half the $3–4+ benchmark, confirming strong creative-algorithm fit through nine-plus weeks in market.</p>
       <p><strong>Walmart Old Model campaigns (May 12–31) closed at <span class="hl-green">2.40× blended ROAS</span></strong> on <span class="hl-green">$20,017 in attributed sales</span> — final results under the previous attribution model. New Model campaigns (June 1–July 12) have now generated <span class="hl-green">$14,648 in attributed sales</span> on $13,788 in spend for a <span class="hl-green">1.06× blended ROAS</span> — Contextual leading at <span class="hl-green">1.24× ROAS</span> and building steadily.</p>
       <p><strong>Display Custom/Carousel has now generated 13.71M impressions</strong> across 16 retail partners (May 20–July 12), with Kroger, Stop &amp; Shop, and Walmart leading on volume. The <strong>Off Story campaign</strong> (launched May 27) has grown to <span class="hl-blue">891,844 impressions</span> across 11 retail partners at a strong <span class="hl-green">1.36% CTR</span> and <span class="hl-green">75.5% story completion rate</span>.</p>
@@ -263,6 +263,29 @@ footer strong { color:var(--dd-muted); }
 
   <!-- PLATFORM SUMMARY CARDS -->
   <div class="platform-grid">
+    <div class="platform-card">
+      <div class="card-header" style="background:var(--dd-lime)">
+        <div class="plat-icon" style="background:rgba(0,19,56,.12)">📈</div>
+        <div><div class="plat-name" style="color:var(--dd-navy)">Retail Velocity</div><div class="plat-sub" style="color:var(--dd-navy);opacity:.6;">Since May 17 Post-Launch</div></div>
+      </div>
+      <div class="card-body">
+        <div class="metric-row"><div class="m-label">Weekly Velocity ($/Store)</div><div class="m-value">$47.45<br><span class="bmark good">✓ Up 35% since launch</span></div></div>
+        <div class="metric-row"><div class="m-label">ACV Distribution</div><div class="m-value">28.2%</div></div>
+        <div class="metric-row"><div class="m-label">4-Wk Dollar Sales</div><div class="m-value">$3.06M</div></div>
+      </div>
+    </div>
+    <div class="platform-card">
+      <div class="card-header" style="background:var(--dd-cyan)">
+        <div class="plat-icon">🎯</div>
+        <div><div class="plat-name">Core Audience Fit</div><div class="plat-sub">Experian Mosaic · Retail Buyers</div></div>
+      </div>
+      <div class="card-body">
+        <div class="metric-row"><div class="m-label">Top Segment</div><div class="m-value" style="font-size:13px;">Families in Motion<br>189 Index<br><span class="bmark good">✓ 2× avg household</span></div></div>
+        <div class="metric-row"><div class="m-label">#2 Segment</div><div class="m-value" style="font-size:13px;">Power Elite<br>133 Index</div></div>
+        <div class="metric-row"><div class="m-label">Walmart New Buyers</div><div class="m-value" style="font-size:13px;">88.3%<br><span class="bmark good">✓ Acquisition engine</span></div></div>
+        <div class="metric-row"><div class="m-label">TikTok Top Segment</div><div class="m-value" style="font-size:13px;">35–44 Female<br>Most efficient</div></div>
+      </div>
+    </div>
     <div class="platform-card">
       <div class="card-header meta">
         <div class="plat-icon">💬</div>
@@ -289,6 +312,30 @@ footer strong { color:var(--dd-muted); }
         <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$2,108</div></div>
       </div>
     </div>
+    <div class="platform-card" style="grid-column:1 / -1;">
+      <div class="card-header walmart">
+        <div class="plat-icon">🛒</div>
+        <div><div class="plat-name">Walmart</div><div class="plat-sub">Old Model (May 12–31) + New Model (June 1–July 12)</div></div>
+      </div>
+      <div class="card-body" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+        <div>
+          <div style="font-size:11px;font-weight:900;color:var(--dd-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--dd-border);">Old Model · May 12–31</div>
+          <div class="metric-row"><div class="m-label">Ad Revenue</div><div class="m-value">$20,017</div></div>
+          <div class="metric-row"><div class="m-label">ROAS</div><div class="m-value">2.40×</div></div>
+          <div class="metric-row"><div class="m-label">Transactions</div><div class="m-value">3,046</div></div>
+          <div class="metric-row"><div class="m-label">Units Sold</div><div class="m-value">3,046+</div></div>
+          <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$8,329</div></div>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:900;color:var(--dd-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--dd-border);">New Model · June 1–July 12</div>
+          <div class="metric-row"><div class="m-label">Ad Revenue</div><div class="m-value">$14,648</div></div>
+          <div class="metric-row"><div class="m-label">ROAS</div><div class="m-value">1.06×<br><span class="bmark warn">⏳ Building</span></div></div>
+          <div class="metric-row"><div class="m-label">Transactions</div><div class="m-value">2,384</div></div>
+          <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">1,703,364</div></div>
+          <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$13,788</div></div>
+        </div>
+      </div>
+    </div>
     <div class="platform-card">
       <div class="card-header tiktok">
         <div class="plat-icon">🎵</div>
@@ -300,32 +347,6 @@ footer strong { color:var(--dd-muted); }
         <div class="metric-row"><div class="m-label">Clicks</div><div class="m-value">3,729</div></div>
         <div class="metric-row"><div class="m-label">CTR</div><div class="m-value">0.12%</div></div>
         <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$5,444</div></div>
-      </div>
-    </div>
-    <div class="platform-card">
-      <div class="card-header walmart">
-        <div class="plat-icon">🛒</div>
-        <div><div class="plat-name">Walmart — Old Model</div><div class="plat-sub">Previous Attribution Model · May 12–31</div></div>
-      </div>
-      <div class="card-body">
-        <div class="metric-row"><div class="m-label">Ad Revenue</div><div class="m-value">$20,017</div></div>
-        <div class="metric-row"><div class="m-label">ROAS</div><div class="m-value">2.40×</div></div>
-        <div class="metric-row"><div class="m-label">Transactions</div><div class="m-value">3,046</div></div>
-        <div class="metric-row"><div class="m-label">Units Sold</div><div class="m-value">3,046+</div></div>
-        <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$8,329</div></div>
-      </div>
-    </div>
-    <div class="platform-card">
-      <div class="card-header walmart">
-        <div class="plat-icon">🆕</div>
-        <div><div class="plat-name">Walmart — New Model</div><div class="plat-sub">New Attribution Model · June 1–July 12</div></div>
-      </div>
-      <div class="card-body">
-        <div class="metric-row"><div class="m-label">Ad Revenue</div><div class="m-value">$14,648</div></div>
-        <div class="metric-row"><div class="m-label">ROAS</div><div class="m-value">1.06×<br><span class="bmark warn">⏳ Building</span></div></div>
-        <div class="metric-row"><div class="m-label">Transactions</div><div class="m-value">2,384</div></div>
-        <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">1,703,364</div></div>
-        <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$13,788</div></div>
       </div>
     </div>
     <div class="platform-card">
@@ -380,8 +401,8 @@ footer strong { color:var(--dd-muted); }
         </div>
         <div class="detail-body">
           <div class="kpi-hero"><div class="val">33,077</div><div class="lbl">Total Post Engagements</div></div>
-          <div class="metric-row"><div class="m-label">Engagement Rate</div><div class="m-value">17.74%<br><span class="bmark good">✓ Strong</span></div></div>
-          <div class="metric-row"><div class="m-label">CPE (Cost Per Engagement)</div><div class="m-value">$0.13</div></div>
+          <div class="metric-row"><div class="m-label">Engagement Rate</div><div class="m-value">17.74%<br><span class="bmark good">↑ 34% vs 6-wk avg</span></div></div>
+          <div class="metric-row"><div class="m-label">CPE (Cost Per Engagement)</div><div class="m-value">$0.13<br><span class="bmark good">↓ 8% vs 6-wk avg</span></div></div>
           <div class="metric-row"><div class="m-label">Link Clicks</div><div class="m-value">1,948</div></div>
           <div class="metric-row"><div class="m-label">CTR (Link)</div><div class="m-value">1.05%</div></div>
           <div class="metric-row"><div class="m-label">Landing Page Views</div><div class="m-value">758</div></div>
@@ -410,8 +431,8 @@ footer strong { color:var(--dd-muted); }
           <span class="wow-chart-subtitle">Weekly Incremental</span>
         </div>
         <div class="wow-chart-legend">
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#1877F2"></span>Eng Rate</span>
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#F45198"></span>CPE</span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#1877F2"></span>Eng Rate <span class="bmark good" style="margin-left:4px;">↑ 34%</span></span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#F45198"></span>CPE <span class="bmark good" style="margin-left:4px;">↓ 8%</span></span>
         </div>
       </div>
       <div class="wow-chart-body">
@@ -431,10 +452,10 @@ footer strong { color:var(--dd-muted); }
           <div><h3>Traffic</h3><div class="sub">Clicks & Landing Page Views</div></div>
         </div>
         <div class="detail-body">
-          <div class="kpi-hero"><div class="val">12,077</div><div class="lbl">Landing Page Views</div></div>
+          <div class="kpi-hero"><div class="val">12,077</div><div class="lbl">Landing Page Views<br><span class="bmark" style="background:var(--dd-light);color:var(--dd-muted);">≈ Flat vs 6-wk avg</span></div></div>
           <div class="metric-row">
             <div class="m-label">LPV Rate<small>Benchmark: 0.56%+ CTR</small></div>
-            <div class="m-value">3.10%<br><span class="bmark good">✓ Well above benchmark</span></div>
+            <div class="m-value">3.10%<br><span class="bmark warn">↓ 22% vs 6-wk avg</span></div>
           </div>
           <div class="metric-row"><div class="m-label">Link Clicks</div><div class="m-value">15,009</div></div>
           <div class="metric-row"><div class="m-label">Cost Per LPV</div><div class="m-value">$0.17</div></div>
@@ -466,8 +487,8 @@ footer strong { color:var(--dd-muted); }
           <span class="wow-chart-subtitle">Weekly Incremental</span>
         </div>
         <div class="wow-chart-legend">
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#1877F2"></span>CTR</span>
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#3DB5E6"></span>Landing Page Views</span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#1877F2"></span>CTR <span class="bmark warn" style="margin-left:4px;">↓ 22%</span></span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#3DB5E6"></span>Landing Page Views <span class="bmark" style="margin-left:4px;background:var(--dd-light);color:var(--dd-muted);">≈ Flat</span></span>
         </div>
       </div>
       <div class="wow-chart-body">
@@ -502,8 +523,8 @@ footer strong { color:var(--dd-muted); }
       </div>
       <div class="detail-body">
         <div class="kpi-split" style="grid-template-columns:repeat(4,1fr);">
-          <div class="kpi-hero"><div class="val">3,060,189</div><div class="lbl">Impressions</div></div>
-          <div class="kpi-hero"><div class="val">$1.78</div><div class="lbl">CPM<br><span class="bmark good" style="font-size:9px;">✓ vs $3–4 bmark</span></div></div>
+          <div class="kpi-hero"><div class="val">3,060,189</div><div class="lbl">Impressions<br><span class="bmark warn" style="font-size:9px;">↓ 7% vs 6-wk avg</span></div></div>
+          <div class="kpi-hero"><div class="val">$1.78</div><div class="lbl">CPM <span style="font-size:9px;color:var(--dd-muted);font-weight:700;">(vs $3–4 bmark)</span><br><span class="bmark warn" style="font-size:9px;">↑ 9% vs 6-wk avg</span></div></div>
           <div class="kpi-hero"><div class="val">3,729</div><div class="lbl">Clicks</div></div>
           <div class="kpi-hero"><div class="val">$5,444</div><div class="lbl">Spend</div></div>
         </div>
@@ -523,8 +544,8 @@ footer strong { color:var(--dd-muted); }
           <span class="wow-chart-subtitle">Weekly Incremental</span>
         </div>
         <div class="wow-chart-legend">
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#010101"></span>Impressions</span>
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#3DB5E6"></span>CPM</span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#010101"></span>Impressions <span class="bmark warn" style="margin-left:4px;">↓ 7%</span></span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#3DB5E6"></span>CPM <span class="bmark warn" style="margin-left:4px;">↑ 9%</span></span>
         </div>
       </div>
       <div class="wow-chart-body">
@@ -627,8 +648,8 @@ footer strong { color:var(--dd-muted); }
           <div><h3>Sales Detail</h3><div class="sub">Attributed Metrics — June 1 – July 12</div></div>
         </div>
         <div class="detail-body">
-          <div class="metric-row"><div class="m-label">Attributed Revenue</div><div class="m-value">$14,648</div></div>
-          <div class="metric-row"><div class="m-label">ROAS</div><div class="m-value">1.06×<br><span class="bmark warn">⏳ Building</span></div></div>
+          <div class="metric-row"><div class="m-label">Attributed Revenue</div><div class="m-value">$14,648<br><span class="bmark good">↑ 12% vs 6-wk avg</span></div></div>
+          <div class="metric-row"><div class="m-label">ROAS</div><div class="m-value">1.06×<br><span class="bmark warn">↓ 12% vs 6-wk avg</span></div></div>
           <div class="metric-row"><div class="m-label">Transactions</div><div class="m-value">2,384</div></div>
           <div class="metric-row"><div class="m-label">Avg. Transaction Value</div><div class="m-value">$6.14</div></div>
           <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$13,788</div></div>
@@ -706,8 +727,8 @@ footer strong { color:var(--dd-muted); }
           <span class="wow-chart-subtitle">Weekly Incremental</span>
         </div>
         <div class="wow-chart-legend">
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#0071CE"></span>ROAS</span>
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#FFC220"></span>Attributed Revenue</span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#0071CE"></span>ROAS <span class="bmark warn" style="margin-left:4px;">↓ 12%</span></span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#FFC220"></span>Attributed Revenue <span class="bmark good" style="margin-left:4px;">↑ 12%</span></span>
         </div>
       </div>
       <div class="wow-chart-body">
@@ -747,8 +768,8 @@ footer strong { color:var(--dd-muted); }
         </div>
         <div class="detail-body">
           <div class="kpi-hero"><div class="val">13,713,155</div><div class="lbl">Total Impressions</div></div>
-          <div class="metric-row"><div class="m-label">Total Clicks</div><div class="m-value">22,992</div></div>
-          <div class="metric-row"><div class="m-label">CTR</div><div class="m-value">0.17%</div></div>
+          <div class="metric-row"><div class="m-label">Total Clicks</div><div class="m-value">22,992<br><span class="bmark warn">↓ 6% vs 6-wk avg</span></div></div>
+          <div class="metric-row"><div class="m-label">CTR</div><div class="m-value">0.17%<br><span class="bmark good">↑ 3% vs 6-wk avg</span></div></div>
           <div class="metric-row"><div class="m-label">Total Spend</div><div class="m-value">$82,278.93</div></div>
           <div class="metric-row"><div class="m-label">eCPM</div><div class="m-value">$6.00</div></div>
           <div class="metric-row"><div class="m-label">CPC</div><div class="m-value">$3.58</div></div>
@@ -778,8 +799,8 @@ footer strong { color:var(--dd-muted); }
           <span class="wow-chart-subtitle">Weekly Incremental</span>
         </div>
         <div class="wow-chart-legend">
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#FF6C00"></span>CTR</span>
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#C2D600"></span>Total Clicks</span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#FF6C00"></span>CTR <span class="bmark good" style="margin-left:4px;">↑ 3%</span></span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#C2D600"></span>Total Clicks <span class="bmark warn" style="margin-left:4px;">↓ 6%</span></span>
         </div>
       </div>
       <div class="wow-chart-body">
@@ -805,9 +826,9 @@ footer strong { color:var(--dd-muted); }
           <div><h3>Story Metrics</h3><div class="sub">May 27 – July 12, 2026</div></div>
         </div>
         <div class="detail-body">
-          <div class="kpi-hero"><div class="val">1.36%</div><div class="lbl">CTR <span style="font-size:10px;color:var(--dd-good);font-weight:800;">(Strong vs. 0.17% Display)</span></div></div>
+          <div class="kpi-hero"><div class="val">1.36%</div><div class="lbl">CTR <span style="font-size:10px;color:var(--dd-good);font-weight:800;">(Strong vs. 0.17% Display)</span><br><span class="bmark good" style="font-size:9px;">↑ 4% vs 6-wk avg</span></div></div>
           <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">891,844</div></div>
-          <div class="metric-row"><div class="m-label">Click-Throughs</div><div class="m-value">12,117</div></div>
+          <div class="metric-row"><div class="m-label">Click-Throughs</div><div class="m-value">12,117<br><span class="bmark good">↑ 18% vs 6-wk avg</span></div></div>
           <div class="metric-row"><div class="m-label">Story Interactions</div><div class="m-value">111,930</div></div>
           <div class="metric-row"><div class="m-label">Total Spend</div><div class="m-value">$8,918.44</div></div>
           <div class="metric-row"><div class="m-label">eCPM</div><div class="m-value">$10.00</div></div>
@@ -861,8 +882,8 @@ footer strong { color:var(--dd-muted); }
           <span class="wow-chart-subtitle">Weekly Incremental</span>
         </div>
         <div class="wow-chart-legend">
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#FF6C00"></span>CTR</span>
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#C2D600"></span>Click-Throughs</span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#FF6C00"></span>CTR <span class="bmark good" style="margin-left:4px;">↑ 4%</span></span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#C2D600"></span>Click-Throughs <span class="bmark good" style="margin-left:4px;">↑ 18%</span></span>
         </div>
       </div>
       <div class="wow-chart-body">
