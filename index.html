@@ -31,6 +31,9 @@
   --col-tiktok:   #010101;
   --col-walmart:  #0071CE;
   --col-display:  #FF6C00;
+  --col-destini:  #00A7A1;
+  --col-ibotta:   #E01A7F;
+  --col-promo:    #7C3AED;
 }
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin:0; padding:0; background:var(--dd-bg); font-family:'Futura PT',Futura,'Trebuchet MS',Helvetica,Arial,sans-serif; color:var(--dd-text); line-height:1.5; font-size:14px; }
@@ -73,6 +76,7 @@ html, body { margin:0; padding:0; background:var(--dd-bg); font-family:'Futura P
 .accent-dot { width:14px; height:14px; border-radius:50%; flex-shrink:0; }
 .badge { background:var(--dd-light); color:var(--dd-blue-dark); border:1px solid var(--dd-border); border-radius:20px; font-size:11px; font-weight:800; padding:3px 12px; letter-spacing:.04em; text-transform:uppercase; }
 .note-banner { background:var(--dd-warn-bg); border:1px solid #FDE68A; border-left:4px solid var(--dd-warn); border-radius:8px; padding:10px 14px; font-size:12px; color:#92400E; margin-bottom:20px; font-weight:600; }
+.note-caveat { background:#F5F3FF; border:1px solid #E9D5FF; border-left:4px solid var(--col-promo); border-radius:8px; padding:10px 14px; font-size:12px; color:#5B21B6; margin-bottom:20px; font-weight:600; }
 .note-info { background:var(--dd-light); border:1px solid var(--dd-border); border-left:4px solid var(--dd-blue); border-radius:8px; padding:10px 14px; font-size:12px; color:var(--dd-blue-dark); margin-bottom:20px; font-weight:600; }
 
 /* OVERVIEW NARRATIVE */
@@ -140,8 +144,8 @@ html, body { margin:0; padding:0; background:var(--dd-bg); font-family:'Futura P
 /* SUB TABS */
 .sub-tab-bar { display:flex; gap:8px; margin-bottom:22px; }
 .sub-tab-btn { background:var(--dd-white); border:1.5px solid var(--dd-border); border-radius:8px; padding:8px 18px; cursor:pointer; font-size:12px; font-weight:800; color:var(--dd-muted); letter-spacing:.05em; text-transform:uppercase; transition:all .15s; font-family:inherit; }
-.sub-tab-btn:hover { border-color:var(--col-meta); color:var(--col-meta); }
-.sub-tab-btn.active { background:var(--col-meta); border-color:var(--col-meta); color:white; }
+.sub-tab-btn:hover { border-color:var(--active-col,var(--col-meta)); color:var(--active-col,var(--col-meta)); }
+.sub-tab-btn.active { background:var(--active-col,var(--col-meta)); border-color:var(--active-col,var(--col-meta)); color:white; }
 
 /* COMING SOON */
 .coming-soon-wrap { background:var(--dd-white); border:2px dashed var(--dd-border); border-radius:14px; padding:60px 40px; text-align:center; }
@@ -213,8 +217,8 @@ footer strong { color:var(--dd-muted); }
     <div class="header-sub">Spring/Summer 2026 · Paid Media · Prepared by Kazoo Media</div>
   </div>
   <div class="header-right">
-    <div class="header-badge"><div class="lbl">Reporting Period</div><div class="val">May 1 – August 16, 2026</div></div>
-    <div class="header-badge"><div class="lbl">Data As Of</div><div class="val">August 16, 2026</div></div>
+    <div class="header-badge"><div class="lbl">Reporting Period</div><div class="val">May 1 – August 23, 2026</div></div>
+    <div class="header-badge"><div class="lbl">Data As Of</div><div class="val">August 23, 2026</div></div>
     <div class="prepared-by"><strong>Kazoo Media</strong><span id="generatedDate"></span></div>
   </div>
 </header>
@@ -229,7 +233,7 @@ footer strong { color:var(--dd-muted); }
   <button class="tab-btn"               onclick="setTab('walmart',   this)">Walmart</button>
   <button class="tab-btn tab-market"    onclick="setTab('market',    this)">Market Performance</button>
   <button class="tab-btn tab-audience"  onclick="setTab('audience',  this)">Audience Insights</button>
-  <div class="data-date">Data as of: August 16, 2026</div>
+  <div class="data-date">Data as of: August 23, 2026</div>
 </div>
 
 <div class="wrap">
@@ -239,25 +243,25 @@ footer strong { color:var(--dd-muted); }
   <div class="section-label">
     <div class="accent-dot" style="background:var(--dd-blue)"></div>
     <h2>Campaign Overview</h2>
-    <span class="badge">May 1 – August 16, 2026</span>
+    <span class="badge">May 1 – August 23, 2026</span>
   </div>
 
   <!-- WRITTEN NARRATIVE -->
   <div class="narrative-card">
     <h3>📋 Performance Summary</h3>
     <div class="platform-chips">
-      <span class="plat-chip meta"><span class="plat-chip-dot" style="background:#1877F2"></span>Meta · May 4 – Aug 16</span>
-      <span class="plat-chip tiktok"><span class="plat-chip-dot" style="background:#010101"></span>TikTok · May 11 – Aug 16</span>
+      <span class="plat-chip meta"><span class="plat-chip-dot" style="background:#1877F2"></span>Meta · May 4 – Aug 23</span>
+      <span class="plat-chip tiktok"><span class="plat-chip-dot" style="background:#010101"></span>TikTok · May 11 – Aug 23</span>
       <span class="plat-chip walmart"><span class="plat-chip-dot" style="background:#0071CE"></span>Walmart · Old Model (May) + New Model (June–Aug)</span>
-      <span class="plat-chip" style="background:#FFF7ED;color:#C2410C;"><span class="plat-chip-dot" style="background:#FF6C00"></span>Display · May 20 – Aug 16</span>
-      <span class="plat-chip" style="background:#FFF7ED;color:#C2410C;"><span class="plat-chip-dot" style="background:#FF6C00"></span>Off Story · May 27 – Aug 16</span>
+      <span class="plat-chip" style="background:#FFF7ED;color:#C2410C;"><span class="plat-chip-dot" style="background:#FF6C00"></span>Display · May 20 – Aug 23</span>
+      <span class="plat-chip" style="background:#FFF7ED;color:#C2410C;"><span class="plat-chip-dot" style="background:#FF6C00"></span>Off Story · May 27 – Aug 23</span>
     </div>
     <div class="narrative-body">
-      <p><strong>Retail data confirms the story building at the platform level.</strong> Weekly velocity has grown <span class="hl-green">35% since the first full post-launch read</span> (May 17 → June 14), and Experian Mosaic segmentation shows our targeted audience — <span class="hl-green">"Families in Motion," indexing at 189</span> — is in fact the top-buying household segment at retail, validating both media efficiency and targeting strategy.</p>
-      <p><strong>Meta continues to deliver standout efficiency.</strong> The Engagement campaign has generated <span class="hl-green">47,878 post engagements</span> at a <span class="hl-green">$0.12 CPE</span> with a <span class="hl-green">18.36% engagement rate</span>. The Traffic/Retargeting campaign has driven <span class="hl-green">17,269 landing page views</span> at just <span class="hl-green">$0.17 per visit</span> — Frequency is at 1.96–2.64 across the two campaigns, well within healthy range.</p>
-      <p><strong>TikTok has now surpassed 4.5M impressions</strong> at a sustained <span class="hl-green">$1.87 CPM</span> — less than half the $3–4+ benchmark, confirming strong creative-algorithm fit through fourteen weeks in market.</p>
-      <p><strong>Walmart Old Model campaigns (May 12–31) closed at <span class="hl-green">2.40× blended ROAS</span></strong> on <span class="hl-green">$20,017 in attributed sales</span> — final results under the previous attribution model. New Model campaigns (June 1–Aug 16) have now generated <span class="hl-warn">$21,716 in attributed sales</span> on $23,492 in spend for a <span class="hl-warn">0.92× blended ROAS</span> — down from 0.95× last period. Contextual remains the leader among New Model ad groups at <span class="hl-warn">0.98× ROAS</span>, but has now moderated below 1.0× for the first time, down from 1.03× last period.</p>
-      <p><strong>Display Custom/Carousel has now generated 26.09M impressions</strong> across 16 retail partners (May 20–Aug 16), with Kroger, Smart &amp; Final, and Walmart leading on volume. The <strong>Off Story campaign</strong> (launched May 27) has grown to <span class="hl-blue">1,744,453 impressions</span> across 11 retail partners at a strong <span class="hl-green">1.48% CTR</span>, though story completion rate eased further to <span class="hl-warn">67.9%</span> (from 69.8% last period). Third-party retail sales data (Circana ABCS) attributes <span class="hl-green">$588,776 in sales</span> to these Display campaigns May 20–Jul 31 at a <span class="hl-green">4.30× blended ROAS</span>, with Walmart driving 93.2% of attributed sales.</p>
+      <p><strong>Retail velocity has cooled from its June peak, but remains well above January levels.</strong> Weekly velocity peaked at $47.45/store in the 4 weeks ending Jun 14, then eased to <span class="hl-warn">$35.73/store as of Aug 19</span> — still <span class="hl-green">137% above the January baseline</span>, but down 25% from the peak. Distribution (ACV) has ticked down slightly too (28.2% → 26.2%), and 4-week dollar sales have fallen from $3.06M to $1.82M over the same stretch. Experian Mosaic segmentation still shows "Families in Motion" as the clear top-buying household segment — its index actually strengthened further, from 189 to <span class="hl-green">222</span>, in the latest refresh. See the Market Performance tab for the full trend and retailer breakdown.</p>
+      <p><strong>Meta continues to deliver standout efficiency.</strong> The Engagement campaign has generated <span class="hl-green">50,076 post engagements</span> at a <span class="hl-green">$0.12 CPE</span> with an <span class="hl-green">18.42% engagement rate</span>. The Traffic/Retargeting campaign has driven <span class="hl-green">18,236 landing page views</span> at just <span class="hl-green">$0.17 per visit</span> — Frequency is at 1.97–2.65 across the two campaigns, well within healthy range.</p>
+      <p><strong>TikTok has now surpassed 4.9M impressions</strong> at a sustained <span class="hl-green">$1.87 CPM</span> — less than half the $3–4+ benchmark, confirming strong creative-algorithm fit through fifteen weeks in market.</p>
+      <p><strong>Walmart Old Model campaigns (May 12–31) closed at <span class="hl-green">2.40× blended ROAS</span></strong> on <span class="hl-green">$20,017 in attributed sales</span> — final results under the previous attribution model. New Model campaigns (June 1–Aug 23) have now generated <span class="hl-warn">$23,817 in attributed sales</span> on $26,511 in spend for a <span class="hl-warn">0.90× blended ROAS</span> — down from 0.92× last period. Contextual remains the leader among New Model ad groups at <span class="hl-warn">0.93× ROAS</span>, continuing to moderate below 1.0×, down from 0.98× last period.</p>
+      <p><strong>Display Custom/Carousel has now generated 26.25M impressions</strong> across 16 retail partners (May 20–Aug 23), with Kroger, Smart &amp; Final, and Walmart leading on volume — the campaign entered its final flight (Aug 15–Sep 7, 15% of total budget) last week, so incremental delivery will run lighter through the remainder of the campaign as planned (see Display tab). The <strong>Off Story campaign</strong> (launched May 27) has grown to <span class="hl-blue">1,797,093 impressions</span> across 11 retail partners at a strong <span class="hl-green">1.50% CTR</span>; story completion rate held steady at <span class="hl-green">67.9%</span> after several updates of easing. Third-party retail sales data (Circana ABCS) attributes <span class="hl-green">$588,776 in sales</span> to these Display campaigns May 20–Jul 31 at a <span class="hl-green">4.30× blended ROAS</span>, with Walmart driving 93.2% of attributed sales — this section still trails the rest of the tab since ABCS data lags.</p>
     </div>
   </div>
 
@@ -269,9 +273,9 @@ footer strong { color:var(--dd-muted); }
         <div><div class="plat-name" style="color:var(--dd-navy)">Retail Velocity</div><div class="plat-sub" style="color:var(--dd-navy);opacity:.6;">Since May 17 Post-Launch</div></div>
       </div>
       <div class="card-body">
-        <div class="metric-row"><div class="m-label">Weekly Velocity ($/Store)</div><div class="m-value">$47.45<br><span class="bmark good">✓ Up 35% since launch</span></div></div>
-        <div class="metric-row"><div class="m-label">ACV Distribution</div><div class="m-value">28.2%</div></div>
-        <div class="metric-row"><div class="m-label">4-Wk Dollar Sales</div><div class="m-value">$3.06M</div></div>
+        <div class="metric-row"><div class="m-label">Weekly Velocity ($/Store)</div><div class="m-value">$35.73<br><span class="bmark warn">↓ 25% vs Jun 14 peak · ↑ 137% vs Jan</span></div></div>
+        <div class="metric-row"><div class="m-label">ACV Distribution</div><div class="m-value">26.2%</div></div>
+        <div class="metric-row"><div class="m-label">4-Wk Dollar Sales</div><div class="m-value">$1.82M</div></div>
       </div>
     </div>
     <div class="platform-card">
@@ -280,8 +284,8 @@ footer strong { color:var(--dd-muted); }
         <div><div class="plat-name">Core Audience Fit</div><div class="plat-sub">Experian Mosaic · Retail Buyers</div></div>
       </div>
       <div class="card-body">
-        <div class="metric-row"><div class="m-label">Top Segment</div><div class="m-value" style="font-size:13px;">Families in Motion<br>189 Index<br><span class="bmark good">✓ 2× avg household</span></div></div>
-        <div class="metric-row"><div class="m-label">#2 Segment</div><div class="m-value" style="font-size:13px;">Power Elite<br>133 Index</div></div>
+        <div class="metric-row"><div class="m-label">Top Segment</div><div class="m-value" style="font-size:13px;">Families in Motion<br>222 Index<br><span class="bmark good">✓ 2× avg household</span></div></div>
+        <div class="metric-row"><div class="m-label">#2 Segment</div><div class="m-value" style="font-size:13px;">Flourishing Families / Power Elite<br>122 Index (tied)</div></div>
         <div class="metric-row"><div class="m-label">Walmart New Buyers</div><div class="m-value" style="font-size:13px;">83.6%<br><span class="bmark good">✓ Acquisition engine</span></div></div>
         <div class="metric-row"><div class="m-label">TikTok Top Segment</div><div class="m-value" style="font-size:13px;">35–44 Female<br>Most efficient</div></div>
       </div>
@@ -292,11 +296,11 @@ footer strong { color:var(--dd-muted); }
         <div><div class="plat-name">Meta — Engagement</div><div class="plat-sub">Since May 4, 2026</div></div>
       </div>
       <div class="card-body">
-        <div class="metric-row"><div class="m-label">Engagements</div><div class="m-value">47,878</div></div>
-        <div class="metric-row"><div class="m-label">Engagement Rate</div><div class="m-value">18.36%<br><span class="bmark good">✓ Strong</span></div></div>
+        <div class="metric-row"><div class="m-label">Engagements</div><div class="m-value">50,076</div></div>
+        <div class="metric-row"><div class="m-label">Engagement Rate</div><div class="m-value">18.42%<br><span class="bmark good">✓ Strong</span></div></div>
         <div class="metric-row"><div class="m-label">CPE</div><div class="m-value">$0.12</div></div>
-        <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">260,763</div></div>
-        <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$5,886</div></div>
+        <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">271,919</div></div>
+        <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$6,194</div></div>
       </div>
     </div>
     <div class="platform-card">
@@ -305,17 +309,17 @@ footer strong { color:var(--dd-muted); }
         <div><div class="plat-name">Meta — Traffic / RTG</div><div class="plat-sub">Retargeting · Since May 4, 2026</div></div>
       </div>
       <div class="card-body">
-        <div class="metric-row"><div class="m-label">Landing Page Views</div><div class="m-value">17,269</div></div>
+        <div class="metric-row"><div class="m-label">Landing Page Views</div><div class="m-value">18,236</div></div>
         <div class="metric-row"><div class="m-label">Cost Per LPV</div><div class="m-value">$0.17<br><span class="bmark good">✓ Efficient</span></div></div>
-        <div class="metric-row"><div class="m-label">Frequency</div><div class="m-value">1.96</div></div>
-        <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">560,829</div></div>
-        <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$2,944</div></div>
+        <div class="metric-row"><div class="m-label">Frequency</div><div class="m-value">1.97</div></div>
+        <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">589,470</div></div>
+        <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$3,091</div></div>
       </div>
     </div>
     <div class="platform-card" style="grid-column:1 / -1;">
       <div class="card-header walmart">
         <div class="plat-icon">🛒</div>
-        <div><div class="plat-name">Walmart</div><div class="plat-sub">Old Model (May 12–31) + New Model (June 1–Aug 16)</div></div>
+        <div><div class="plat-name">Walmart</div><div class="plat-sub">Old Model (May 12–31) + New Model (June 1–Aug 23)</div></div>
       </div>
       <div class="card-body" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
         <div>
@@ -327,12 +331,12 @@ footer strong { color:var(--dd-muted); }
           <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$8,329</div></div>
         </div>
         <div>
-          <div style="font-size:11px;font-weight:900;color:var(--dd-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--dd-border);">New Model · June 1–Aug 16</div>
-          <div class="metric-row"><div class="m-label">Ad Revenue</div><div class="m-value">$21,716</div></div>
-          <div class="metric-row"><div class="m-label">ROAS</div><div class="m-value">0.92×</div></div>
-          <div class="metric-row"><div class="m-label">Transactions</div><div class="m-value">3,543</div></div>
-          <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">2,725,447</div></div>
-          <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$23,492</div></div>
+          <div style="font-size:11px;font-weight:900;color:var(--dd-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--dd-border);">New Model · June 1–Aug 23</div>
+          <div class="metric-row"><div class="m-label">Ad Revenue</div><div class="m-value">$23,817</div></div>
+          <div class="metric-row"><div class="m-label">ROAS</div><div class="m-value">0.90×</div></div>
+          <div class="metric-row"><div class="m-label">Transactions</div><div class="m-value">3,892</div></div>
+          <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">3,061,091</div></div>
+          <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$26,511</div></div>
         </div>
       </div>
     </div>
@@ -342,36 +346,36 @@ footer strong { color:var(--dd-muted); }
         <div><div class="plat-name">TikTok — Reach</div><div class="plat-sub">Since May 11, 2026</div></div>
       </div>
       <div class="card-body">
-        <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">4,574,589</div></div>
+        <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">4,923,112</div></div>
         <div class="metric-row"><div class="m-label">CPM</div><div class="m-value">$1.87<br><span class="bmark good">✓ Below $3–4 bmark</span></div></div>
-        <div class="metric-row"><div class="m-label">Clicks</div><div class="m-value">5,896</div></div>
+        <div class="metric-row"><div class="m-label">Clicks</div><div class="m-value">6,537</div></div>
         <div class="metric-row"><div class="m-label">CTR</div><div class="m-value">0.13%</div></div>
-        <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$8,538</div></div>
+        <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$9,187</div></div>
       </div>
     </div>
     <div class="platform-card">
       <div class="card-header display">
         <div class="plat-icon">📺</div>
-        <div><div class="plat-name">Display — Custom/Carousel</div><div class="plat-sub">May 20 – August 16, 2026</div></div>
+        <div><div class="plat-name">Display — Custom/Carousel</div><div class="plat-sub">May 20 – August 23, 2026</div></div>
       </div>
       <div class="card-body">
-        <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">26,086,898</div></div>
-        <div class="metric-row"><div class="m-label">Clicks</div><div class="m-value">45,729</div></div>
+        <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">26,253,818</div></div>
+        <div class="metric-row"><div class="m-label">Clicks</div><div class="m-value">46,146</div></div>
         <div class="metric-row"><div class="m-label">CTR</div><div class="m-value">0.18%</div></div>
-        <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$156,521</div></div>
+        <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$157,523</div></div>
         <div class="metric-row"><div class="m-label">Retail Partners</div><div class="m-value">16</div></div>
       </div>
     </div>
     <div class="platform-card">
       <div class="card-header display">
         <div class="plat-icon">📖</div>
-        <div><div class="plat-name">Display — Off Story</div><div class="plat-sub">May 27 – August 16, 2026</div></div>
+        <div><div class="plat-name">Display — Off Story</div><div class="plat-sub">May 27 – August 23, 2026</div></div>
       </div>
       <div class="card-body">
-        <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">1,744,453</div></div>
-        <div class="metric-row"><div class="m-label">CTR</div><div class="m-value">1.48%<br><span class="bmark good">✓ Strong</span></div></div>
-        <div class="metric-row"><div class="m-label">Story Completion Rate</div><div class="m-value">67.9%<br><span class="bmark warn">⚠ Eased</span></div></div>
-        <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$17,445</div></div>
+        <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">1,797,093</div></div>
+        <div class="metric-row"><div class="m-label">CTR</div><div class="m-value">1.50%<br><span class="bmark good">✓ Strong</span></div></div>
+        <div class="metric-row"><div class="m-label">Story Completion Rate</div><div class="m-value">67.9%<br><span class="bmark good">✓ Held steady</span></div></div>
+        <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$17,971</div></div>
         <div class="metric-row"><div class="m-label">Retail Partners</div><div class="m-value">11</div></div>
       </div>
     </div>
@@ -395,7 +399,7 @@ footer strong { color:var(--dd-muted); }
   <div class="section-label">
     <div class="accent-dot" style="background:var(--col-meta)"></div>
     <h2>Meta Ads</h2>
-    <span class="badge" style="background:#EBF3FF;color:#1350AE;border-color:#BFDBFE;">Facebook + Instagram · May 4 – August 16, 2026</span>
+    <span class="badge" style="background:#EBF3FF;color:#1350AE;border-color:#BFDBFE;">Facebook + Instagram · May 4 – August 23, 2026</span>
   </div>
   <div class="sub-tab-bar">
     <button class="sub-tab-btn active" id="meta-eng-btn" onclick="setMetaTab('engagement',this)">💬 Engagement Campaign</button>
@@ -412,12 +416,12 @@ footer strong { color:var(--dd-muted); }
           <div><h3>Engagements</h3><div class="sub">Primary Objective</div></div>
         </div>
         <div class="detail-body">
-          <div class="kpi-hero"><div class="val">47,878</div><div class="lbl">Total Post Engagements</div></div>
-          <div class="metric-row"><div class="m-label">Engagement Rate</div><div class="m-value">18.36%<br><span class="bmark good">↑ 1% vs 6-wk avg</span></div></div>
-          <div class="metric-row"><div class="m-label">CPE (Cost Per Engagement)</div><div class="m-value">$0.12<br><span class="bmark warn">↑ 14% vs 6-wk avg</span></div></div>
-          <div class="metric-row"><div class="m-label">Link Clicks</div><div class="m-value">2,895</div></div>
-          <div class="metric-row"><div class="m-label">CTR (Link)</div><div class="m-value">1.11%</div></div>
-          <div class="metric-row"><div class="m-label">Landing Page Views</div><div class="m-value">758</div></div>
+          <div class="kpi-hero"><div class="val">50,076</div><div class="lbl">Total Post Engagements</div></div>
+          <div class="metric-row"><div class="m-label">Engagement Rate</div><div class="m-value">18.42%<br><span class="bmark warn">↓ 6% vs 6-wk avg</span></div></div>
+          <div class="metric-row"><div class="m-label">CPE (Cost Per Engagement)</div><div class="m-value">$0.12<br><span class="bmark warn">↑ 20% vs 6-wk avg</span></div></div>
+          <div class="metric-row"><div class="m-label">Link Clicks</div><div class="m-value">3,041</div></div>
+          <div class="metric-row"><div class="m-label">CTR (Link)</div><div class="m-value">1.12%</div></div>
+          <div class="metric-row"><div class="m-label">Landing Page Views</div><div class="m-value">758<br><span style="font-size:9px;color:var(--dd-muted);font-weight:700;">no breakdown in this week's export — carried forward</span></div></div>
         </div>
       </div>
       <div class="detail-card">
@@ -426,11 +430,11 @@ footer strong { color:var(--dd-muted); }
           <div><h3>Cost &amp; Delivery</h3><div class="sub">Efficiency Metrics</div></div>
         </div>
         <div class="detail-body">
-          <div class="kpi-hero"><div class="val">$5,886</div><div class="lbl">Total Spend</div></div>
-          <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">260,763</div></div>
-          <div class="metric-row"><div class="m-label">Reach</div><div class="m-value">98,741</div></div>
-          <div class="metric-row"><div class="m-label">Frequency</div><div class="m-value">2.64</div></div>
-          <div class="metric-row"><div class="m-label">CPM</div><div class="m-value">$22.57</div></div>
+          <div class="kpi-hero"><div class="val">$6,194</div><div class="lbl">Total Spend</div></div>
+          <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">271,919</div></div>
+          <div class="metric-row"><div class="m-label">Reach</div><div class="m-value">102,695</div></div>
+          <div class="metric-row"><div class="m-label">Frequency</div><div class="m-value">2.65</div></div>
+          <div class="metric-row"><div class="m-label">CPM</div><div class="m-value">$22.78</div></div>
         </div>
       </div>
     </div>
@@ -443,8 +447,8 @@ footer strong { color:var(--dd-muted); }
           <span class="wow-chart-subtitle">Weekly Incremental</span>
         </div>
         <div class="wow-chart-legend">
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#1877F2"></span>Eng Rate <span class="bmark good" style="margin-left:4px;">↑ 1%</span></span>
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#F45198"></span>CPE <span class="bmark warn" style="margin-left:4px;">↑ 14%</span></span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#1877F2"></span>Eng Rate <span class="bmark warn" style="margin-left:4px;">↓ 6%</span></span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#F45198"></span>CPE <span class="bmark warn" style="margin-left:4px;">↑ 20%</span></span>
         </div>
       </div>
       <div class="wow-chart-body">
@@ -464,15 +468,15 @@ footer strong { color:var(--dd-muted); }
           <div><h3>Traffic</h3><div class="sub">Clicks & Landing Page Views</div></div>
         </div>
         <div class="detail-body">
-          <div class="kpi-hero"><div class="val">17,269</div><div class="lbl">Landing Page Views<br><span class="bmark warn">↓ 16% vs 6-wk avg</span></div></div>
+          <div class="kpi-hero"><div class="val">18,236</div><div class="lbl">Landing Page Views<br><span class="bmark warn">↓ 13% vs 6-wk avg</span></div></div>
           <div class="metric-row">
             <div class="m-label">LPV Rate<small>Benchmark: 0.56%+ CTR</small></div>
-            <div class="m-value">3.08%<br><span class="bmark good">↑ 10% vs 6-wk avg</span></div>
+            <div class="m-value">3.09%<br><span class="bmark good">↑ 10% vs 6-wk avg</span></div>
           </div>
-          <div class="metric-row"><div class="m-label">Link Clicks</div><div class="m-value">21,556</div></div>
+          <div class="metric-row"><div class="m-label">Link Clicks</div><div class="m-value">22,735</div></div>
           <div class="metric-row"><div class="m-label">Cost Per LPV</div><div class="m-value">$0.17</div></div>
-          <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">560,829</div></div>
-          <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$2,944</div></div>
+          <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">589,470</div></div>
+          <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$3,091</div></div>
         </div>
       </div>
       <div class="detail-card">
@@ -481,12 +485,12 @@ footer strong { color:var(--dd-muted); }
           <div><h3>Retargeting Health</h3><div class="sub">Frequency &amp; Reach</div></div>
         </div>
         <div class="detail-body">
-          <div class="kpi-hero"><div class="val">1.96</div><div class="lbl">Frequency</div></div>
+          <div class="kpi-hero"><div class="val">1.97</div><div class="lbl">Frequency</div></div>
           <div style="text-align:center;font-size:11px;color:var(--dd-muted);margin:-8px 0 12px;font-weight:600;">Target range: 1.5 – 3.0× · <span style="color:var(--dd-good);font-weight:800;">In healthy range</span></div>
-          <div class="metric-row"><div class="m-label">Reach</div><div class="m-value">285,941</div></div>
-          <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">560,829</div></div>
-          <div class="metric-row"><div class="m-label">CPM</div><div class="m-value">$5.25</div></div>
-          <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$2,944</div></div>
+          <div class="metric-row"><div class="m-label">Reach</div><div class="m-value">299,638</div></div>
+          <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">589,470</div></div>
+          <div class="metric-row"><div class="m-label">CPM</div><div class="m-value">$5.24</div></div>
+          <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$3,091</div></div>
         </div>
       </div>
     </div>
@@ -500,7 +504,7 @@ footer strong { color:var(--dd-muted); }
         </div>
         <div class="wow-chart-legend">
           <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#1877F2"></span>CTR <span class="bmark good" style="margin-left:4px;">↑ 10%</span></span>
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#3DB5E6"></span>Landing Page Views <span class="bmark warn" style="margin-left:4px;">↓ 16%</span></span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#3DB5E6"></span>Landing Page Views <span class="bmark warn" style="margin-left:4px;">↓ 13%</span></span>
         </div>
       </div>
       <div class="wow-chart-body">
@@ -516,16 +520,16 @@ footer strong { color:var(--dd-muted); }
   <div class="section-label">
     <div class="accent-dot" style="background:var(--col-tiktok)"></div>
     <h2>TikTok</h2>
-    <span class="badge">Reach Campaign · May 11 – August 16, 2026</span>
+    <span class="badge">Reach Campaign · May 11 – August 23, 2026</span>
   </div>
   <div class="note-info" style="border-left-color:var(--col-tiktok);color:var(--dd-navy);">
     🎵 <strong>TikTok Reach Campaign</strong> — Objective: maximize unique reach at an efficient CPM. Post engagement metrics are tracked as secondary indicators of creative resonance.
   </div>
   <div class="stat-row">
-    <div class="stat-box"><div class="top-bar" style="background:var(--col-tiktok)"></div><div class="val">4.57M</div><div class="lbl">Impressions</div></div>
+    <div class="stat-box"><div class="top-bar" style="background:var(--col-tiktok)"></div><div class="val">4.92M</div><div class="lbl">Impressions</div></div>
     <div class="stat-box"><div class="top-bar" style="background:var(--col-tiktok)"></div><div class="val">$1.87</div><div class="lbl">CPM</div></div>
-    <div class="stat-box"><div class="top-bar" style="background:var(--dd-cyan)"></div><div class="val">5,896</div><div class="lbl">Clicks</div></div>
-    <div class="stat-box"><div class="top-bar" style="background:var(--dd-cyan)"></div><div class="val">$8,538</div><div class="lbl">Spend</div></div>
+    <div class="stat-box"><div class="top-bar" style="background:var(--dd-cyan)"></div><div class="val">6,537</div><div class="lbl">Clicks</div></div>
+    <div class="stat-box"><div class="top-bar" style="background:var(--dd-cyan)"></div><div class="val">$9,187</div><div class="lbl">Spend</div></div>
   </div>
   <div class="detail-grid" style="grid-template-columns:1fr;">
     <div class="detail-card">
@@ -535,16 +539,16 @@ footer strong { color:var(--dd-muted); }
       </div>
       <div class="detail-body">
         <div class="kpi-split" style="grid-template-columns:repeat(4,1fr);">
-          <div class="kpi-hero"><div class="val">4,574,589</div><div class="lbl">Impressions<br><span class="bmark good" style="font-size:9px;">↑ 24% vs 6-wk avg</span></div></div>
-          <div class="kpi-hero"><div class="val">$1.87</div><div class="lbl">CPM <span style="font-size:9px;color:var(--dd-muted);font-weight:700;">(vs $3–4 bmark)</span><br><span class="bmark good" style="font-size:9px;">↓ 5% vs 6-wk avg</span></div></div>
-          <div class="kpi-hero"><div class="val">5,896</div><div class="lbl">Clicks</div></div>
-          <div class="kpi-hero"><div class="val">$8,538</div><div class="lbl">Spend</div></div>
+          <div class="kpi-hero"><div class="val">4,923,112</div><div class="lbl">Impressions<br><span class="bmark good" style="font-size:9px;">↑ 14% vs 6-wk avg</span></div></div>
+          <div class="kpi-hero"><div class="val">$1.87</div><div class="lbl">CPM <span style="font-size:9px;color:var(--dd-muted);font-weight:700;">(vs $3–4 bmark)</span><br><span class="bmark good" style="font-size:9px;">↓ 9% vs 6-wk avg</span></div></div>
+          <div class="kpi-hero"><div class="val">6,537</div><div class="lbl">Clicks</div></div>
+          <div class="kpi-hero"><div class="val">$9,187</div><div class="lbl">Spend</div></div>
         </div>
-        <div class="metric-row"><div class="m-label">Clicks (Destination)</div><div class="m-value">5,896</div></div>
+        <div class="metric-row"><div class="m-label">Clicks (Destination)</div><div class="m-value">6,537</div></div>
         <div class="metric-row"><div class="m-label">CTR</div><div class="m-value">0.13%</div></div>
-        <div class="metric-row"><div class="m-label">CPC</div><div class="m-value">$1.45</div></div>
+        <div class="metric-row"><div class="m-label">CPC</div><div class="m-value">$1.41</div></div>
         <div class="metric-row"><div class="m-label">Conversions</div><div class="m-value">0</div></div>
-        <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$8,538.20</div></div>
+        <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$9,186.57</div></div>
       </div>
     </div>
   </div>
@@ -556,8 +560,8 @@ footer strong { color:var(--dd-muted); }
           <span class="wow-chart-subtitle">Weekly Incremental</span>
         </div>
         <div class="wow-chart-legend">
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#010101"></span>Impressions <span class="bmark good" style="margin-left:4px;">↑ 24%</span></span>
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#3DB5E6"></span>CPM <span class="bmark good" style="margin-left:4px;">↓ 5%</span></span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#010101"></span>Impressions <span class="bmark good" style="margin-left:4px;">↑ 14%</span></span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#3DB5E6"></span>CPM <span class="bmark good" style="margin-left:4px;">↓ 9%</span></span>
         </div>
       </div>
       <div class="wow-chart-body">
@@ -576,7 +580,7 @@ footer strong { color:var(--dd-muted); }
   </div>
   <div class="sub-tab-bar">
     <button class="sub-tab-btn active" id="walmart-may-btn" onclick="setWalmartTab('may',this)" style="--active-col:var(--col-walmart)">📊 Old Model (May 12–31)</button>
-    <button class="sub-tab-btn" id="walmart-june-btn" onclick="setWalmartTab('june',this)" style="--active-col:var(--col-walmart)">🆕 New Model (June 1–Aug 16)</button>
+    <button class="sub-tab-btn" id="walmart-june-btn" onclick="setWalmartTab('june',this)" style="--active-col:var(--col-walmart)">🆕 New Model (June 1–Aug 23)</button>
   </div>
 
   <!-- MAY HISTORICAL -->
@@ -646,36 +650,36 @@ footer strong { color:var(--dd-muted); }
 
   <!-- JUNE CAMPAIGNS -->
   <div id="walmart-june-section" style="display:none">
-    <div class="note-info">🆕 <strong>New Attribution Model — June 1 – August 16, 2026</strong> — New campaigns launched June 1. Results are early-stage and will build week over week as the new model establishes attribution windows.</div>
+    <div class="note-info">🆕 <strong>New Attribution Model — June 1 – August 23, 2026</strong> — New campaigns launched June 1. Results are early-stage and will build week over week as the new model establishes attribution windows.</div>
     <div class="stat-row">
-      <div class="stat-box"><div class="top-bar" style="background:var(--col-walmart)"></div><div class="val">$21,716</div><div class="lbl">Ad Revenue</div></div>
-      <div class="stat-box"><div class="top-bar" style="background:#FFC220"></div><div class="val">0.92×</div><div class="lbl">ROAS</div></div>
-      <div class="stat-box"><div class="top-bar" style="background:var(--col-walmart)"></div><div class="val">3,543</div><div class="lbl">Transactions</div></div>
-      <div class="stat-box"><div class="top-bar" style="background:var(--dd-muted)"></div><div class="val">$23,492</div><div class="lbl">Spend</div></div>
+      <div class="stat-box"><div class="top-bar" style="background:var(--col-walmart)"></div><div class="val">$23,817</div><div class="lbl">Ad Revenue</div></div>
+      <div class="stat-box"><div class="top-bar" style="background:#FFC220"></div><div class="val">0.90×</div><div class="lbl">ROAS</div></div>
+      <div class="stat-box"><div class="top-bar" style="background:var(--col-walmart)"></div><div class="val">3,892</div><div class="lbl">Transactions</div></div>
+      <div class="stat-box"><div class="top-bar" style="background:var(--dd-muted)"></div><div class="val">$26,511</div><div class="lbl">Spend</div></div>
     </div>
     <div class="detail-grid">
       <div class="detail-card">
         <div class="detail-header" style="background:var(--col-walmart)">
           <div class="plat-icon" style="background:rgba(255,255,255,.2)">🛒</div>
-          <div><h3>Sales Detail</h3><div class="sub">Attributed Metrics — June 1 – Aug 16</div></div>
+          <div><h3>Sales Detail</h3><div class="sub">Attributed Metrics — June 1 – Aug 23</div></div>
         </div>
         <div class="detail-body">
-          <div class="metric-row"><div class="m-label">Attributed Revenue</div><div class="m-value">$21,716<br><span class="bmark good">↑ 9% vs 6-wk avg</span></div></div>
-          <div class="metric-row"><div class="m-label">ROAS</div><div class="m-value">0.92×<br><span class="bmark warn">↓ 4% vs 6-wk avg</span></div></div>
-          <div class="metric-row"><div class="m-label">Transactions</div><div class="m-value">3,543</div></div>
-          <div class="metric-row"><div class="m-label">Avg. Transaction Value</div><div class="m-value">$6.13</div></div>
-          <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$23,492</div></div>
+          <div class="metric-row"><div class="m-label">Attributed Revenue</div><div class="m-value">$23,817<br><span class="bmark good">↑ 29% vs 6-wk avg</span></div></div>
+          <div class="metric-row"><div class="m-label">ROAS</div><div class="m-value">0.90×<br><span class="bmark warn">↓ 7% vs 6-wk avg</span></div></div>
+          <div class="metric-row"><div class="m-label">Transactions</div><div class="m-value">3,892</div></div>
+          <div class="metric-row"><div class="m-label">Avg. Transaction Value</div><div class="m-value">$6.12</div></div>
+          <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$26,511</div></div>
         </div>
       </div>
       <div class="detail-card">
         <div class="detail-header" style="background:var(--col-walmart)">
           <div class="plat-icon" style="background:rgba(255,255,255,.2)">📡</div>
-          <div><h3>Delivery Metrics</h3><div class="sub">Impressions &amp; Clicks — June 1 – Aug 16</div></div>
+          <div><h3>Delivery Metrics</h3><div class="sub">Impressions &amp; Clicks — June 1 – Aug 23</div></div>
         </div>
         <div class="detail-body">
-          <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">2,725,447</div></div>
-          <div class="metric-row"><div class="m-label">eCPM</div><div class="m-value">$8.62</div></div>
-          <div class="metric-row"><div class="m-label">Clicks</div><div class="m-value">8,127</div></div>
+          <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">3,061,091</div></div>
+          <div class="metric-row"><div class="m-label">eCPM</div><div class="m-value">$8.66</div></div>
+          <div class="metric-row"><div class="m-label">Clicks</div><div class="m-value">9,325</div></div>
           <div class="metric-row"><div class="m-label">CTR</div><div class="m-value">0.30%</div></div>
         </div>
       </div>
@@ -684,23 +688,23 @@ footer strong { color:var(--dd-muted); }
       <div class="detail-card">
         <div class="detail-header" style="background:var(--col-walmart)">
           <div class="plat-icon" style="background:rgba(255,255,255,.2)">🎯</div>
-          <div><h3>Contextual Targeting</h3><div class="sub">June 1 – August 16, 2026</div></div>
+          <div><h3>Contextual Targeting</h3><div class="sub">June 1 – August 23, 2026</div></div>
         </div>
         <div class="detail-body">
-          <div class="kpi-hero"><div class="val">0.98×</div><div class="lbl">ROAS</div></div>
-          <div class="metric-row"><div class="m-label">Attributed Sales</div><div class="m-value">$16,306</div></div>
-          <div class="metric-row"><div class="m-label">Transactions</div><div class="m-value">2,669</div></div>
-          <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">2,138,633</div></div>
-          <div class="metric-row"><div class="m-label">Clicks</div><div class="m-value">6,508</div></div>
-          <div class="metric-row"><div class="m-label">CTR</div><div class="m-value">0.30%</div></div>
-          <div class="metric-row"><div class="m-label">eCPM</div><div class="m-value">$7.80</div></div>
-          <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$16,677</div></div>
+          <div class="kpi-hero"><div class="val">0.93×</div><div class="lbl">ROAS</div></div>
+          <div class="metric-row"><div class="m-label">Attributed Sales</div><div class="m-value">$18,401</div></div>
+          <div class="metric-row"><div class="m-label">Transactions</div><div class="m-value">3,017</div></div>
+          <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">2,474,277</div></div>
+          <div class="metric-row"><div class="m-label">Clicks</div><div class="m-value">7,706</div></div>
+          <div class="metric-row"><div class="m-label">CTR</div><div class="m-value">0.31%</div></div>
+          <div class="metric-row"><div class="m-label">eCPM</div><div class="m-value">$7.96</div></div>
+          <div class="metric-row"><div class="m-label">Spend</div><div class="m-value">$19,696</div></div>
         </div>
       </div>
       <div class="detail-card">
         <div class="detail-header" style="background:var(--col-walmart)">
           <div class="plat-icon" style="background:rgba(255,255,255,.2)">👤</div>
-          <div><h3>Behavioral Custom</h3><div class="sub">June 1 – August 16, 2026 — Paused</div></div>
+          <div><h3>Behavioral Custom</h3><div class="sub">June 1 – August 23, 2026 — Paused</div></div>
         </div>
         <div class="detail-body">
           <div class="kpi-hero"><div class="val">0.56×</div><div class="lbl">ROAS</div></div>
@@ -716,7 +720,7 @@ footer strong { color:var(--dd-muted); }
       <div class="detail-card">
         <div class="detail-header" style="background:var(--col-walmart)">
           <div class="plat-icon" style="background:rgba(255,255,255,.2)">🔑</div>
-          <div><h3>Keywords Targeting</h3><div class="sub">June 1 – August 16, 2026 — Paused</div></div>
+          <div><h3>Keywords Targeting</h3><div class="sub">June 1 – August 23, 2026 — Paused</div></div>
         </div>
         <div class="detail-body">
           <div class="kpi-hero"><div class="val">0.83×</div><div class="lbl">ROAS</div></div>
@@ -732,12 +736,12 @@ footer strong { color:var(--dd-muted); }
       <div class="detail-card">
         <div class="detail-header" style="background:var(--col-walmart)">
           <div class="plat-icon" style="background:rgba(255,255,255,.2)">🆕</div>
-          <div><h3>Lapsed Buyers – Behavioral</h3><div class="sub">June 1 – August 16, 2026</div></div>
+          <div><h3>Lapsed Buyers – Behavioral</h3><div class="sub">June 1 – August 23, 2026 — Paused</div></div>
         </div>
         <div class="detail-body">
-          <div class="kpi-hero"><div class="val">0.71×</div><div class="lbl">ROAS</div></div>
-          <div class="metric-row"><div class="m-label">Attributed Sales</div><div class="m-value">$134</div></div>
-          <div class="metric-row"><div class="m-label">Transactions</div><div class="m-value">23</div></div>
+          <div class="kpi-hero"><div class="val">0.75×</div><div class="lbl">ROAS</div></div>
+          <div class="metric-row"><div class="m-label">Attributed Sales</div><div class="m-value">$140</div></div>
+          <div class="metric-row"><div class="m-label">Transactions</div><div class="m-value">24</div></div>
           <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">18,065</div></div>
           <div class="metric-row"><div class="m-label">Clicks</div><div class="m-value">36</div></div>
           <div class="metric-row"><div class="m-label">CTR</div><div class="m-value">0.20%</div></div>
@@ -756,8 +760,8 @@ footer strong { color:var(--dd-muted); }
           <span class="wow-chart-subtitle">Weekly Incremental</span>
         </div>
         <div class="wow-chart-legend">
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#0071CE"></span>ROAS <span class="bmark warn" style="margin-left:4px;">↓ 4%</span></span>
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#FFC220"></span>Attributed Revenue <span class="bmark good" style="margin-left:4px;">↑ 9%</span></span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#0071CE"></span>ROAS <span class="bmark warn" style="margin-left:4px;">↓ 7%</span></span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#FFC220"></span>Attributed Revenue <span class="bmark good" style="margin-left:4px;">↑ 29%</span></span>
         </div>
       </div>
       <div class="wow-chart-body">
@@ -773,7 +777,7 @@ footer strong { color:var(--dd-muted); }
   <div class="section-label">
     <div class="accent-dot" style="background:var(--col-display)"></div>
     <h2>Display</h2>
-    <span class="badge" style="background:#FFF7ED;color:#C2410C;border-color:#FED7AA;">Custom/Carousel + Off Story · May 20 – Aug 16</span>
+    <span class="badge" style="background:#FFF7ED;color:#C2410C;border-color:#FED7AA;">Custom/Carousel + Off Story · May 20 – Aug 23</span>
   </div>
   <div class="sub-tab-bar">
     <button class="sub-tab-btn active" id="display-custom-btn" onclick="setDisplayTab('custom',this)">📺 Custom / Product Carousel</button>
@@ -826,24 +830,27 @@ footer strong { color:var(--dd-muted); }
   <div id="display-custom-section">
     <div class="note-info">📺 <strong>Custom / Product Carousel</strong> — Retailer-targeted custom ad units (300×250 and 300×600) running across 16 grocery retail partners.</div>
     <div class="stat-row">
-      <div class="stat-box"><div class="top-bar" style="background:var(--col-display)"></div><div class="val">26.09M</div><div class="lbl">Impressions</div></div>
-      <div class="stat-box"><div class="top-bar" style="background:var(--col-display)"></div><div class="val">45,729</div><div class="lbl">Clicks</div></div>
+      <div class="stat-box"><div class="top-bar" style="background:var(--col-display)"></div><div class="val">26.25M</div><div class="lbl">Impressions</div></div>
+      <div class="stat-box"><div class="top-bar" style="background:var(--col-display)"></div><div class="val">46,146</div><div class="lbl">Clicks</div></div>
       <div class="stat-box"><div class="top-bar" style="background:var(--dd-orange)"></div><div class="val">0.18%</div><div class="lbl">CTR</div></div>
-      <div class="stat-box"><div class="top-bar" style="background:var(--dd-muted)"></div><div class="val">$156,521</div><div class="lbl">Spend</div></div>
+      <div class="stat-box"><div class="top-bar" style="background:var(--dd-muted)"></div><div class="val">$157,523</div><div class="lbl">Spend</div></div>
+    </div>
+    <div class="note-info">
+      📉 <strong>Flighting update:</strong> this campaign is flighted in three phases — 15% of total budget May 20–Jun 14, 70% Jun 15–Aug 14, and 15% for the final tail, Aug 15–Sep 7. Last week was the first full week in that reduced final flight, so the lighter incremental delivery below (166,920 new impressions, 417 new clicks) is expected pacing, not a performance drop — volumes will stay lighter through Sep 7.
     </div>
     <div class="detail-grid">
       <div class="detail-card">
         <div class="detail-header" style="background:var(--col-display)">
           <div class="plat-icon" style="background:rgba(255,255,255,.2)">📺</div>
-          <div><h3>Delivery Summary</h3><div class="sub">May 20 – August 16, 2026</div></div>
+          <div><h3>Delivery Summary</h3><div class="sub">May 20 – August 23, 2026</div></div>
         </div>
         <div class="detail-body">
-          <div class="kpi-hero"><div class="val">26,086,898</div><div class="lbl">Total Impressions</div></div>
-          <div class="metric-row"><div class="m-label">Total Clicks</div><div class="m-value">45,729<br><span class="bmark good">↑ 35% vs 6-wk avg</span></div></div>
-          <div class="metric-row"><div class="m-label">CTR</div><div class="m-value">0.18%<br><span class="bmark good">↑ 64% vs 6-wk avg</span></div></div>
-          <div class="metric-row"><div class="m-label">Total Spend</div><div class="m-value">$156,521.39</div></div>
+          <div class="kpi-hero"><div class="val">26,253,818</div><div class="lbl">Total Impressions</div></div>
+          <div class="metric-row"><div class="m-label">Total Clicks</div><div class="m-value">46,146<br><span class="bmark warn">↓ 90% vs 6-wk avg</span></div></div>
+          <div class="metric-row"><div class="m-label">CTR</div><div class="m-value">0.18%<br><span class="bmark good">↑ 35% vs 6-wk avg</span></div></div>
+          <div class="metric-row"><div class="m-label">Total Spend</div><div class="m-value">$157,522.91</div></div>
           <div class="metric-row"><div class="m-label">eCPM</div><div class="m-value">$6.00</div></div>
-          <div class="metric-row"><div class="m-label">CPC</div><div class="m-value">$3.42</div></div>
+          <div class="metric-row"><div class="m-label">CPC</div><div class="m-value">$3.41</div></div>
         </div>
       </div>
       <div class="detail-card">
@@ -852,12 +859,12 @@ footer strong { color:var(--dd-muted); }
           <div><h3>Top Retail Partners</h3><div class="sub">By Impressions — Cumulative</div></div>
         </div>
         <div class="detail-body">
-          <div class="metric-row"><div class="m-label">Kroger</div><div class="m-value">3,780,937</div></div>
-          <div class="metric-row"><div class="m-label">Smart &amp; Final</div><div class="m-value">3,508,276</div></div>
-          <div class="metric-row"><div class="m-label">Walmart</div><div class="m-value">3,103,251</div></div>
-          <div class="metric-row"><div class="m-label">Stop &amp; Shop</div><div class="m-value">2,573,464</div></div>
-          <div class="metric-row"><div class="m-label">Sullivan's Foods</div><div class="m-value">2,431,354</div></div>
-          <div class="metric-row"><div class="m-label">Bashas</div><div class="m-value">2,027,492</div></div>
+          <div class="metric-row"><div class="m-label">Kroger</div><div class="m-value">3,822,418</div></div>
+          <div class="metric-row"><div class="m-label">Smart &amp; Final</div><div class="m-value">3,521,136</div></div>
+          <div class="metric-row"><div class="m-label">Walmart</div><div class="m-value">3,134,007</div></div>
+          <div class="metric-row"><div class="m-label">Stop &amp; Shop</div><div class="m-value">2,592,913</div></div>
+          <div class="metric-row"><div class="m-label">Sullivan's Foods</div><div class="m-value">2,450,987</div></div>
+          <div class="metric-row"><div class="m-label">Bashas</div><div class="m-value">2,034,897</div></div>
         </div>
       </div>
     </div>
@@ -870,8 +877,8 @@ footer strong { color:var(--dd-muted); }
           <span class="wow-chart-subtitle">Weekly Incremental</span>
         </div>
         <div class="wow-chart-legend">
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#FF6C00"></span>CTR <span class="bmark good" style="margin-left:4px;">↑ 64%</span></span>
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#C2D600"></span>Total Clicks <span class="bmark good" style="margin-left:4px;">↑ 35%</span></span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#FF6C00"></span>CTR <span class="bmark good" style="margin-left:4px;">↑ 35%</span></span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#C2D600"></span>Total Clicks <span class="bmark warn" style="margin-left:4px;">↓ 90%</span></span>
         </div>
       </div>
       <div class="wow-chart-body">
@@ -885,23 +892,23 @@ footer strong { color:var(--dd-muted); }
   <div id="display-story-section" style="display:none">
     <div class="note-info">📖 <strong>Off Story Campaign</strong> — Story-format ad units running across 11 retail partners.</div>
     <div class="stat-row">
-      <div class="stat-box"><div class="top-bar" style="background:var(--col-display)"></div><div class="val">1,744,453</div><div class="lbl">Impressions</div></div>
-      <div class="stat-box"><div class="top-bar" style="background:var(--dd-good)"></div><div class="val">1.48%</div><div class="lbl">CTR</div></div>
+      <div class="stat-box"><div class="top-bar" style="background:var(--col-display)"></div><div class="val">1,797,093</div><div class="lbl">Impressions</div></div>
+      <div class="stat-box"><div class="top-bar" style="background:var(--dd-good)"></div><div class="val">1.50%</div><div class="lbl">CTR</div></div>
       <div class="stat-box"><div class="top-bar" style="background:var(--dd-warn)"></div><div class="val">67.9%</div><div class="lbl">Story Completion</div></div>
-      <div class="stat-box"><div class="top-bar" style="background:var(--dd-muted)"></div><div class="val">$17,445</div><div class="lbl">Spend</div></div>
+      <div class="stat-box"><div class="top-bar" style="background:var(--dd-muted)"></div><div class="val">$17,971</div><div class="lbl">Spend</div></div>
     </div>
     <div class="detail-grid">
       <div class="detail-card">
         <div class="detail-header" style="background:var(--col-display)">
           <div class="plat-icon" style="background:rgba(255,255,255,.2)">📖</div>
-          <div><h3>Story Metrics</h3><div class="sub">May 27 – August 16, 2026</div></div>
+          <div><h3>Story Metrics</h3><div class="sub">May 27 – August 23, 2026</div></div>
         </div>
         <div class="detail-body">
-          <div class="kpi-hero"><div class="val">1.48%</div><div class="lbl">CTR <span style="font-size:10px;color:var(--dd-good);font-weight:800;">(Strong vs. 0.18% Display)</span><br><span class="bmark good" style="font-size:9px;">↑ 16% vs 6-wk avg</span></div></div>
-          <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">1,744,453</div></div>
-          <div class="metric-row"><div class="m-label">Click-Throughs</div><div class="m-value">25,740<br><span class="bmark warn">↓ 21% vs 6-wk avg</span></div></div>
-          <div class="metric-row"><div class="m-label">Story Interactions</div><div class="m-value">213,382</div></div>
-          <div class="metric-row"><div class="m-label">Total Spend</div><div class="m-value">$17,444.53</div></div>
+          <div class="kpi-hero"><div class="val">1.50%</div><div class="lbl">CTR <span style="font-size:10px;color:var(--dd-good);font-weight:800;">(Strong vs. 0.18% Display)</span><br><span class="bmark good" style="font-size:9px;">↑ 39% vs 6-wk avg</span></div></div>
+          <div class="metric-row"><div class="m-label">Impressions</div><div class="m-value">1,797,093</div></div>
+          <div class="metric-row"><div class="m-label">Click-Throughs</div><div class="m-value">26,891<br><span class="bmark warn">↓ 57% vs 6-wk avg</span></div></div>
+          <div class="metric-row"><div class="m-label">Story Interactions</div><div class="m-value">221,424</div></div>
+          <div class="metric-row"><div class="m-label">Total Spend</div><div class="m-value">$17,970.93</div></div>
           <div class="metric-row"><div class="m-label">eCPM</div><div class="m-value">$10.00</div></div>
         </div>
       </div>
@@ -911,9 +918,9 @@ footer strong { color:var(--dd-muted); }
           <div><h3>Story Engagement Funnel</h3><div class="sub">Start → View → Complete</div></div>
         </div>
         <div class="detail-body">
-          <div class="metric-row"><div class="m-label">Story Starts</div><div class="m-value">1,680,472<br><span class="bmark good">96.3% Start Rate</span></div></div>
-          <div class="metric-row"><div class="m-label">Story Views</div><div class="m-value">1,591,650<br><span class="bmark good">91.2% View Rate</span></div></div>
-          <div class="metric-row"><div class="m-label">Story Completions</div><div class="m-value">1,184,795<br><span class="bmark warn">67.9% Completion Rate</span></div></div>
+          <div class="metric-row"><div class="m-label">Story Starts</div><div class="m-value">1,731,041<br><span class="bmark good">96.3% Start Rate</span></div></div>
+          <div class="metric-row"><div class="m-label">Story Views</div><div class="m-value">1,639,433<br><span class="bmark good">91.2% View Rate</span></div></div>
+          <div class="metric-row"><div class="m-label">Story Completions</div><div class="m-value">1,220,919<br><span class="bmark good">67.9% Completion Rate — held steady</span></div></div>
           <div class="metric-row"><div class="m-label">Retail Partners</div><div class="m-value">11</div></div>
         </div>
       </div>
@@ -925,12 +932,12 @@ footer strong { color:var(--dd-muted); }
           <div><h3>Top Retail Partners</h3><div class="sub">By Impressions — Off Story</div></div>
         </div>
         <div class="detail-body">
-          <div class="metric-row"><div class="m-label">Walmart</div><div class="m-value">251,403</div></div>
-          <div class="metric-row"><div class="m-label">Kroger</div><div class="m-value">232,600</div></div>
-          <div class="metric-row"><div class="m-label">Sullivan's Food</div><div class="m-value">205,108<br><span class="bmark good" style="font-size:9px;">↑ passed Stop &amp; Shop</span></div></div>
-          <div class="metric-row"><div class="m-label">Stop &amp; Shop</div><div class="m-value">201,852</div></div>
-          <div class="metric-row"><div class="m-label">Hy-Vee</div><div class="m-value">156,924</div></div>
-          <div class="metric-row"><div class="m-label">Smart &amp; Final / Weis / Bashas / Giant Eagle / Schnucks / Wegmans</div><div class="m-value">697,666</div></div>
+          <div class="metric-row"><div class="m-label">Walmart</div><div class="m-value">257,957</div></div>
+          <div class="metric-row"><div class="m-label">Kroger</div><div class="m-value">245,870</div></div>
+          <div class="metric-row"><div class="m-label">Sullivan's Food</div><div class="m-value">209,466</div></div>
+          <div class="metric-row"><div class="m-label">Stop &amp; Shop</div><div class="m-value">207,112</div></div>
+          <div class="metric-row"><div class="m-label">Hy-Vee</div><div class="m-value">158,165</div></div>
+          <div class="metric-row"><div class="m-label">Smart &amp; Final / Weis / Bashas / Giant Eagle / Schnucks / Wegmans</div><div class="m-value">718,523</div></div>
         </div>
       </div>
       <div class="detail-card" style="background:var(--dd-navy);border:none;">
@@ -939,8 +946,8 @@ footer strong { color:var(--dd-muted); }
           <div><h3 style="color:#fff;">Off Story Highlights</h3><div class="sub" style="color:rgba(255,255,255,.6);">Key Takeaways</div></div>
         </div>
         <div class="detail-body" style="color:rgba(255,255,255,.8);font-size:13px;line-height:1.7;">
-          <p style="margin:0 0 10px;"><strong style="color:#fff;">~8× higher CTR</strong> than Custom/Carousel (1.48% vs. 0.18%) — story format is driving significantly more click-through behavior.</p>
-          <p style="margin:0 0 10px;"><strong style="color:var(--dd-yellow);">67.9% story completion rate</strong> — down further from 69.8% last period, still well above typical display benchmarks.</p>
+          <p style="margin:0 0 10px;"><strong style="color:#fff;">~8× higher CTR</strong> than Custom/Carousel (1.50% vs. 0.18%) — story format is driving significantly more click-through behavior.</p>
+          <p style="margin:0 0 10px;"><strong style="color:var(--dd-yellow);">67.9% story completion rate held steady</strong> this week (was easing further each of the last few updates) — this week's incremental completion rate actually ran higher (68.6%) than the cumulative average, the first sign the multi-week decline may be leveling off.</p>
           <p style="margin:0;"><strong style="color:var(--dd-cyan);">96.3% story start rate</strong> confirms strong initial engagement — the creative is capturing attention at the impression stage.</p>
         </div>
       </div>
@@ -953,8 +960,8 @@ footer strong { color:var(--dd-muted); }
           <span class="wow-chart-subtitle">Weekly Incremental</span>
         </div>
         <div class="wow-chart-legend">
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#FF6C00"></span>CTR <span class="bmark good" style="margin-left:4px;">↑ 16%</span></span>
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#C2D600"></span>Click-Throughs <span class="bmark warn" style="margin-left:4px;">↓ 21%</span></span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#FF6C00"></span>CTR <span class="bmark good" style="margin-left:4px;">↑ 39%</span></span>
+          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#C2D600"></span>Click-Throughs <span class="bmark warn" style="margin-left:4px;">↓ 57%</span></span>
         </div>
       </div>
       <div class="wow-chart-body">
@@ -1329,7 +1336,7 @@ footer strong { color:var(--dd-muted); }
         <span style="width:10px;height:10px;border-radius:50%;background:var(--dd-cyan);display:inline-block;"></span>
         At Retail — Who's Actually Buying Dippin' Dots
       </div>
-      <span class="badge" style="background:#EFF9FF;color:#0369A1;border-color:#BAE6FD;">Experian Mosaic Segmentation · Latest 52 Weeks · Ending May 17, 2026</span>
+      <span class="badge" style="background:#EFF9FF;color:#0369A1;border-color:#BAE6FD;">Experian Mosaic Segmentation · Latest 52 Weeks · Ending Jul 12, 2026</span>
     </div>
 
     <div class="note-info" style="border-left-color:var(--dd-cyan);">
@@ -1345,31 +1352,96 @@ footer strong { color:var(--dd-muted); }
           </div>
         </div>
         <div class="wow-chart-body" style="padding:16px 18px 18px;">
-          <canvas id="mosaicChart" height="320"></canvas>
+          <canvas id="mosaicChart" height="340"></canvas>
         </div>
       </div>
 
       <div class="detail-card">
         <div class="detail-header" style="background:var(--dd-cyan)">
           <div class="plat-icon" style="background:rgba(255,255,255,.2)">💡</div>
-          <div><h3>What This Tells Us</h3><div class="sub">Retail Buyer Profile</div></div>
+          <div><h3>What This Tells Us</h3><div class="sub">Retail Buyer Profile — Updated</div></div>
         </div>
         <div class="detail-body">
           <div class="kpi-split" style="margin-bottom:18px;">
             <div class="kpi-hero">
-              <div class="val" style="font-size:26px;color:var(--dd-good);">189</div>
-              <div class="lbl">Families in Motion<br>Top Index Score</div>
+              <div class="val" style="font-size:26px;color:var(--dd-good);">222</div>
+              <div class="lbl">Families in Motion<br>Top Index Score — up from 189</div>
             </div>
             <div class="kpi-hero">
-              <div class="val" style="font-size:26px;color:var(--dd-good);">133</div>
-              <div class="lbl">Power Elite<br>#2 Index Score</div>
+              <div class="val" style="font-size:26px;color:var(--dd-good);">122</div>
+              <div class="lbl">Flourishing Families / Power Elite<br>Tied for #2 (was Power Elite alone)</div>
             </div>
           </div>
           <ul style="margin:0;padding:0 0 0 18px;font-size:13px;line-height:1.9;color:var(--dd-text);">
-            <li><strong>"Families in Motion" over-indexes at 189</strong> — nearly 2× the average household. This segment represents active, mid-income families with children — exactly the core occasion for Dippin' Dots.</li>
-            <li><strong>"Power Elite" (133) and "Promising Families" (131)</strong> are the next strongest — confirming that the brand skews toward engaged, family-oriented households with disposable income.</li>
-            <li><strong>"Singles and Starters" (130) and "Flourishing Families" (125)</strong> are bright spots beyond the family core — suggesting the brand has reach with younger, diverse households as well.</li>
-            <li><strong>Validation for targeting strategy:</strong> Our Meta and TikTok targeting toward families and 18–34 females aligns well with the actual retail buyer profile. The 65+ Meta over-performer is an interesting expansion opportunity — corresponding Mosaic segments (Thriving Boomers, Autumn Years) under-index, suggesting there's untapped potential in that group.</li>
+            <li><strong>"Families in Motion" strengthened further — now 222</strong> (up from 189), more than 2× the average household. This remains the single strongest signal in the data: active, mid-income families with children.</li>
+            <li><strong>"Flourishing Families" moved up to tie "Power Elite" at 122</strong> (both were separate before, with Power Elite higher at 133 and Flourishing Families at 125) — the family-with-means story stayed roughly as strong, just reshuffled slightly.</li>
+            <li><strong>"Singles and Starters" held steady at 120</strong> (was 130) and "Suburban Style" at 104 (was 117) — both still solidly over-indexed, easing off a bit.</li>
+            <li><strong>"Pastoral Pride" now shows an index (80)</strong> for the first time in this data — a 14th segment where there wasn't previously enough purchase volume to measure.</li>
+            <li><strong>Validation for targeting strategy:</strong> Meta/TikTok targeting toward families and 18–34 females still aligns well with the retail buyer profile. Boomer/senior segments (Thriving Boomers 92, Blue Sky Boomers 77) remain under-indexed relative to the family core — still an open expansion question, not a new finding.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION 6: HOUSEHOLD PROFILE ── -->
+  <div class="creative-section">
+    <div class="creative-section-header">
+      <div class="creative-section-title">
+        <span style="width:10px;height:10px;border-radius:50%;background:var(--col-display);display:inline-block;"></span>
+        At Retail — Household Composition of Buyers
+      </div>
+      <span class="badge" style="background:#FFF7ED;color:#9A3412;border-color:#FED7AA;">Household Purchase Panel · Latest 52 Weeks · Ending Jul 12, 2026</span>
+    </div>
+
+    <div class="note-info" style="border-left-color:var(--col-display);">
+      📊 <strong>How to read these numbers:</strong> Same index convention as Mosaic — 100 = average household, higher means that group over-indexes for buying Dippin' Dots. This slices buyers by conventional demographics (household size, presence/age of children, generation, ethnicity, income) rather than Experian's lifestyle personas.
+    </div>
+
+    <div class="detail-grid">
+      <div class="detail-card">
+        <div class="detail-header" style="background:var(--col-display)">
+          <div class="plat-icon">👨‍👩‍👧‍👦</div>
+          <div><h3>Household Size &amp; Kids</h3><div class="sub">Index vs. Category · 100 = Average</div></div>
+        </div>
+        <div class="detail-body">
+          <div class="kpi-split">
+            <div class="kpi-hero">
+              <div class="val" style="font-size:24px;color:var(--dd-good);">273</div>
+              <div class="lbl">3-Child Households<br>(highest index anywhere in this data)</div>
+            </div>
+            <div class="kpi-hero">
+              <div class="val" style="font-size:24px;">71</div>
+              <div class="lbl">No-Children Households<br>(most under-indexed)</div>
+            </div>
+          </div>
+          <ul style="margin:14px 0 0;padding:0 0 0 18px;font-size:13px;line-height:1.85;color:var(--dd-text);">
+            <li><strong>This is unambiguously a kids'-household brand.</strong> Every child-age bracket over-indexes, peaking with kids age 7–9 in the house (index 241). Households with 3 children hit 273 — the single highest index anywhere in either file.</li>
+            <li><strong>It's the kids, not just bigger households.</strong> 5+ member households index at 173, but 3+ adult households only reach 104 (barely above average) — the size effect is really a children effect.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-header" style="background:#7C3AED">
+          <div class="plat-icon">🎂</div>
+          <div><h3>Generation &amp; Ethnicity</h3><div class="sub">Index vs. Category · 100 = Average</div></div>
+        </div>
+        <div class="detail-body">
+          <div class="kpi-split">
+            <div class="kpi-hero">
+              <div class="val" style="font-size:24px;color:var(--dd-good);">170</div>
+              <div class="lbl">Millennials-Older (1981–89)<br>Top generation index</div>
+            </div>
+            <div class="kpi-hero">
+              <div class="val" style="font-size:24px;">38</div>
+              <div class="lbl">Boomers-Older (1946–55)<br>Most under-indexed generation</div>
+            </div>
+          </div>
+          <ul style="margin:14px 0 0;padding:0 0 0 18px;font-size:13px;line-height:1.85;color:var(--dd-text);">
+            <li><strong>Millennial parents are the buying generation</strong> — both Millennial cohorts index 163–170, tracking closely with the kids-in-household story above. Gen X sits near average (84); Boomers and Seniors fall off sharply.</li>
+            <li><strong>Ethnicity is uneven:</strong> White (112) and "Other" (130) households over-index, Hispanic is close to average (88), and African American households are notably under-indexed (50) — worth knowing for any multicultural creative/media conversations.</li>
+            <li><strong>Income shows no clean story</strong> — the $250K+ bracket over-indexes (148) but sits right next to under-indexed brackets just below it (86–94). Likely small-sample noise at the tails rather than a real income trend.</li>
           </ul>
         </div>
       </div>
@@ -1384,151 +1456,301 @@ footer strong { color:var(--dd-muted); }
   <div class="section-label">
     <div class="accent-dot" style="background:var(--dd-lime)"></div>
     <h2>Market Performance</h2>
-    <span class="badge" style="background:#F7FEE7;color:#3F6212;border-color:#BEF264;">Retail Syndicated Data · Jan – Jun 2026</span>
+    <span class="badge" style="background:#F7FEE7;color:#3F6212;border-color:#BEF264;">Retail Syndicated Data · Jan – Aug 2026</span>
   </div>
 
-  <div class="note-info" style="border-left-color:var(--dd-lime);color:var(--dd-navy);">
-    Awareness and reach channels like Meta, TikTok, and Display are designed to build brand recognition and influence purchase decisions at shelf — not to generate a trackable click-to-buy. We believe this media is doing its job. To show why, we track <strong>velocity</strong> (average weekly dollar sales per store), which is the most honest measure of whether real demand is building. Unlike total sales, velocity isn't inflated by new stores — it tells you how hard each location is working. The trend here is encouraging.
+  <div class="sub-tab-bar">
+    <button class="sub-tab-btn active" id="mkt-sales-btn" onclick="setMarketTab('sales',this)" style="--active-col:var(--dd-lime)">📈 Retail Sales</button>
+    <button class="sub-tab-btn" id="mkt-wtb-btn" onclick="setMarketTab('wtb',this)" style="--active-col:var(--col-destini)">📍 Where to Buy</button>
+    <button class="sub-tab-btn" id="mkt-promo-btn" onclick="setMarketTab('promo',this)" style="--active-col:var(--col-ibotta)">🎯 Promotions</button>
   </div>
 
-  <div class="note-banner">
-    ⚠️ <strong>Distribution context:</strong> Wide retail distribution launched in May 2026. The jump in total dollar sales from Q1 to May is largely explained by a major increase in stores carrying the product — from ~17% ACV in January to ~28% in June. The <strong>velocity trend</strong> below controls for this and is the more meaningful demand signal.
-  </div>
+  <!-- ══════════════ SUB-TAB 1: RETAIL SALES ══════════════ -->
+  <div id="mkt-sales-section">
 
-  <!-- KPI HERO ROW -->
-  <div class="stat-row" style="grid-template-columns:repeat(4,1fr);margin-bottom:24px;">
-    <div class="stat-box">
-      <div class="top-bar" style="background:var(--dd-lime)"></div>
-      <div class="val">$47.45</div>
-      <div class="lbl">Jun 14 Velocity<br><span style="font-size:9px;color:var(--dd-good);font-weight:800;">↑ 214% vs Jan</span></div>
+    <div class="note-info" style="border-left-color:var(--dd-lime);color:var(--dd-navy);">
+      Awareness and reach channels like Meta, TikTok, and Display are designed to build brand recognition and influence purchase decisions at shelf — not to generate a trackable click-to-buy. To show whether that's translating into real demand, we track <strong>velocity</strong> (average weekly dollar sales per store carrying the product). Velocity isn't inflated by new stores coming online — it tells you how hard each existing location is working.
     </div>
-    <div class="stat-box">
-      <div class="top-bar" style="background:var(--dd-lime)"></div>
-      <div class="val">28.2%</div>
-      <div class="lbl">Jun 14 ACV Distribution<br><span style="font-size:9px;color:var(--dd-good);font-weight:800;">↑ from 17% in Jan</span></div>
-    </div>
-    <div class="stat-box">
-      <div class="top-bar" style="background:var(--dd-lime)"></div>
-      <div class="val">$3.06M</div>
-      <div class="lbl">Jun 14 Dollar Sales<br><span style="font-size:9px;color:var(--dd-muted);font-weight:700;">4-week period</span></div>
-    </div>
-    <div class="stat-box">
-      <div class="top-bar" style="background:var(--col-walmart)"></div>
-      <div class="val">2.40×</div>
-      <div class="lbl">Walmart ROAS<br><span style="font-size:9px;color:var(--dd-muted);font-weight:700;">Direct media attribution</span></div>
-    </div>
-  </div>
 
-  <!-- WALMART CALLOUT -->
-  <div class="narrative-card" style="border-left:4px solid var(--col-walmart);margin-bottom:24px;">
-    <h3>🛒 The one place we can measure it directly: Walmart</h3>
-    <div class="narrative-body">
-      <p>Walmart Connect is the only platform in this campaign where ad spend can be directly attributed to in-store and online sales. May campaigns (May 12–31) closed at a <strong class="hl-green">2.40× blended ROAS</strong> on $8,329 in spend — generating <strong>$20,017 in attributed revenue</strong> and <strong>3,046 transactions</strong>, 90.5% from new buyers. New Model campaigns are trending toward similar performance as they build. This is the clearest signal that media investment is translating to purchases.</p>
+    <div class="note-banner">
+      ⚠️ <strong>Updated read (Aug 19):</strong> Velocity and weekly sales peaked around mid-June and have eased back through July and August. Distribution (ACV) has also ticked down slightly rather than continuing to climb. We're still well above the January baseline, but the early post-launch surge wasn't fully sustained — see the trend charts below.
     </div>
-  </div>
 
-  <!-- VELOCITY + DISTRIBUTION CHARTS -->
-  <div class="detail-grid" style="margin-bottom:24px;">
-    <div class="wow-chart-card">
-      <div class="wow-chart-head">
-        <div class="wow-chart-head-left">
-          <span class="wow-chart-title">Velocity Trend — Avg Weekly $/Store</span>
-          <span class="wow-chart-subtitle">Jan – May 2026 · 4-Week Rolling Periods</span>
-        </div>
+    <div class="stat-row" style="grid-template-columns:repeat(4,1fr);margin-bottom:24px;">
+      <div class="stat-box">
+        <div class="top-bar" style="background:var(--dd-lime)"></div>
+        <div class="val">$35.73</div>
+        <div class="lbl">Aug 19 Velocity<br><span style="font-size:9px;color:var(--dd-warn);font-weight:800;">↓ 25% vs Jun 14 peak · ↑ 137% vs Jan</span></div>
       </div>
-      <div class="wow-chart-body">
-        <canvas id="velocityChart" height="200"></canvas>
-        <p style="font-size:11px;color:var(--dd-muted);margin:8px 0 0;font-weight:600;">▲ Campaign launched early May — next reporting period (July) will be the first full post-launch read.</p>
+      <div class="stat-box">
+        <div class="top-bar" style="background:var(--dd-lime)"></div>
+        <div class="val">26.2%</div>
+        <div class="lbl">Aug 19 ACV Distribution<br><span style="font-size:9px;color:var(--dd-muted);font-weight:700;">down slightly from 28.2% in June</span></div>
+      </div>
+      <div class="stat-box">
+        <div class="top-bar" style="background:var(--dd-lime)"></div>
+        <div class="val">$1.82M</div>
+        <div class="lbl">Aug 19 Dollar Sales (4-wk)<br><span style="font-size:9px;color:var(--dd-warn);font-weight:800;">$3.06M → $2.01M → $1.82M since Jun 14</span></div>
+      </div>
+      <div class="stat-box">
+        <div class="top-bar" style="background:var(--col-walmart)"></div>
+        <div class="val">2.40×</div>
+        <div class="lbl">Walmart ROAS<br><span style="font-size:9px;color:var(--dd-muted);font-weight:700;">unchanged — refreshes with Walmart Connect pull</span></div>
       </div>
     </div>
 
-    <div class="wow-chart-card">
-      <div class="wow-chart-head">
-        <div class="wow-chart-head-left">
-          <span class="wow-chart-title">Distribution Growth — ACV %</span>
-          <span class="wow-chart-subtitle">Weighted store coverage · Jan – May 2026</span>
-        </div>
+    <!-- WALMART CALLOUT -->
+    <div class="narrative-card" style="border-left:4px solid var(--col-walmart);margin-bottom:24px;">
+      <h3>🛒 The one place we can measure it directly: Walmart</h3>
+      <div class="narrative-body">
+        <p>Walmart Connect is the only platform in this campaign where ad spend can be directly attributed to in-store and online sales. May campaigns (May 12–31) closed at a <strong class="hl-green">2.40× blended ROAS</strong> on $8,329 in spend — generating <strong>$20,017 in attributed revenue</strong> and <strong>3,046 transactions</strong>, 90.5% from new buyers. See the Walmart tab for how the New Model campaigns are trending since.</p>
       </div>
-      <div class="wow-chart-body">
-        <canvas id="acvChart" height="200"></canvas>
-        <p style="font-size:11px;color:var(--dd-muted);margin:8px 0 0;font-weight:600;">ACV = share of total US retail sales volume represented by stores carrying the product. The April step-up reflects wide distribution rollout.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- WEEKLY SALES WOW TREND -->
-  <div class="detail-grid" style="grid-template-columns:1fr;margin-bottom:24px;">
-    <div class="wow-chart-card">
-      <div class="wow-chart-head">
-        <div class="wow-chart-head-left">
-          <span class="wow-chart-title">Weekly Sales Trend — Dollar &amp; Unit Sales</span>
-          <span class="wow-chart-subtitle">Week-over-Week · Jan 4 – Jun 14, 2026 · Dippin' Dots Inc (All Products)</span>
-        </div>
-        <div class="wow-chart-legend">
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#C2D600"></span>Dollar Sales</span>
-          <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#0048FF"></span>Unit Sales</span>
-        </div>
-      </div>
-      <div class="wow-chart-body">
-        <canvas id="weeklySalesChart" height="220"></canvas>
-        <p style="font-size:11px;color:var(--dd-muted);margin:8px 0 0;font-weight:600;">Highlighted points (May 3 onward) mark weeks following wide retail distribution and media launch — use this view to line up sales shifts with in-market campaign changes.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- RETAILER BREAKDOWN -->
-  <div class="creative-section">
-    <div class="creative-section-header">
-      <div class="creative-section-title">
-        <span style="width:10px;height:10px;border-radius:50%;background:var(--dd-lime);display:inline-block;"></span>
-        Velocity by Retailer — Where the Brand is Working Hardest
-      </div>
-      <span class="badge" style="background:#F7FEE7;color:#3F6212;border-color:#BEF264;">4 Weeks Ending Jun 14, 2026</span>
     </div>
 
     <div class="detail-grid">
-      <div class="wow-chart-card" style="border-radius:14px;overflow:hidden;">
+      <div class="wow-chart-card">
         <div class="wow-chart-head">
           <div class="wow-chart-head-left">
-            <span class="wow-chart-title">Avg Weekly $/Store by Retailer</span>
-            <span class="wow-chart-subtitle">Higher = more product moving per location</span>
+            <span class="wow-chart-title">Velocity Trend — Avg Weekly $/Store</span>
+            <span class="wow-chart-subtitle">Jan – Aug 2026 · 4-Week Rolling Periods</span>
           </div>
         </div>
         <div class="wow-chart-body">
-          <canvas id="retailerVelocityChart" height="240"></canvas>
+          <canvas id="velocityChart" height="200"></canvas>
+          <p style="font-size:11px;color:var(--dd-muted);margin:8px 0 0;font-weight:600;">Jun 14 was the peak so far. Jul 12 and Aug 19 both eased back — worth watching whether this settles at a new, higher-than-January plateau or keeps declining.</p>
         </div>
       </div>
 
-      <div class="detail-card">
-        <div class="detail-header" style="background:var(--dd-navy)">
-          <div class="plat-icon" style="background:rgba(255,255,255,.1)">💡</div>
-          <div><h3>What This Tells Us</h3><div class="sub">Retailer Velocity Story</div></div>
-        </div>
-        <div class="detail-body">
-          <div class="kpi-split" style="margin-bottom:18px;">
-            <div class="kpi-hero">
-              <div class="val" style="font-size:24px;color:var(--col-walmart);">$126.41</div>
-              <div class="lbl">Walmart<br>Velocity/wk/store</div>
-            </div>
-            <div class="kpi-hero">
-              <div class="val" style="font-size:24px;">$47.45</div>
-              <div class="lbl">Total US Average<br>Velocity/wk/store</div>
-            </div>
+      <div class="wow-chart-card">
+        <div class="wow-chart-head">
+          <div class="wow-chart-head-left">
+            <span class="wow-chart-title">Distribution Growth — ACV %</span>
+            <span class="wow-chart-subtitle">Weighted store coverage · Jan – Aug 2026</span>
           </div>
-          <ul style="margin:0;padding:0 0 0 18px;font-size:13px;line-height:1.9;color:var(--dd-text);">
-            <li><strong>Walmart is the standout.</strong> At $126.41/week/store — nearly 2.7× the national average — Walmart locations are moving significantly more product than any other chain. This aligns with Walmart Connect being our direct-attribution media channel.</li>
-            <li><strong>Wegmans and Wakefern punch above their weight.</strong> Wegmans leads at $97/wk/store with ~98% ACV and Wakefern follows at $64 — both well above the national average, suggesting a loyal regional base.</li>
-            <li><strong>Kroger is the biggest store-count opportunity.</strong> Broad distribution but velocity at $44.84/wk/store is below the national average — suggesting room to grow per-store performance, possibly through targeted media.</li>
-            <li><strong>ADUSA and Giant Eagle</strong> are newer distribution doors and still ramping velocity.</li>
-          </ul>
+        </div>
+        <div class="wow-chart-body">
+          <canvas id="acvChart" height="200"></canvas>
+          <p style="font-size:11px;color:var(--dd-muted);margin:8px 0 0;font-weight:600;">ACV = share of total US retail sales volume represented by stores carrying the product. Distribution has held roughly flat since the May step-up rather than continuing to expand.</p>
         </div>
       </div>
     </div>
-  </div>
+
+    <!-- WEEKLY SALES WOW TREND -->
+    <div class="detail-grid" style="grid-template-columns:1fr;margin-bottom:24px;">
+      <div class="wow-chart-card">
+        <div class="wow-chart-head">
+          <div class="wow-chart-head-left">
+            <span class="wow-chart-title">Weekly Sales Trend — Dollar &amp; Unit Sales</span>
+            <span class="wow-chart-subtitle">Week-over-Week · Jan 4 – Aug 9, 2026 · Dippin' Dots Inc (All Products)</span>
+          </div>
+          <div class="wow-chart-legend">
+            <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#C2D600"></span>Dollar Sales</span>
+            <span class="wow-legend-item"><span class="wow-legend-dot" style="background:#0048FF"></span>Unit Sales</span>
+          </div>
+        </div>
+        <div class="wow-chart-body">
+          <canvas id="weeklySalesChart" height="220"></canvas>
+          <p style="font-size:11px;color:var(--dd-muted);margin:8px 0 0;font-weight:600;">Highlighted points (May 3 onward) mark weeks following wide retail distribution and media launch. Both dollar and unit sales have declined in 7 of the last 8 weeks since the mid-June high.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RETAILER BREAKDOWN -->
+    <div class="creative-section">
+      <div class="creative-section-header">
+        <div class="creative-section-title">
+          <span style="width:10px;height:10px;border-radius:50%;background:var(--dd-lime);display:inline-block;"></span>
+          Velocity by Retailer — Where the Brand is Working Hardest
+        </div>
+        <span class="badge" style="background:#F7FEE7;color:#3F6212;border-color:#BEF264;">4 Weeks Ending Aug 19, 2026</span>
+      </div>
+
+      <div class="detail-grid">
+        <div class="wow-chart-card" style="border-radius:14px;overflow:hidden;">
+          <div class="wow-chart-head">
+            <div class="wow-chart-head-left">
+              <span class="wow-chart-title">Avg Weekly $/Store by Retailer</span>
+              <span class="wow-chart-subtitle">Higher = more product moving per location</span>
+            </div>
+          </div>
+          <div class="wow-chart-body">
+            <canvas id="retailerVelocityChart" height="240"></canvas>
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-header" style="background:var(--dd-navy)">
+            <div class="plat-icon" style="background:rgba(255,255,255,.1)">💡</div>
+            <div><h3>What This Tells Us</h3><div class="sub">Retailer Velocity Story — Updated</div></div>
+          </div>
+          <div class="detail-body">
+            <div class="kpi-split" style="margin-bottom:18px;">
+              <div class="kpi-hero">
+                <div class="val" style="font-size:24px;color:var(--dd-good);">$120.08</div>
+                <div class="lbl">Wegmans (new leader)<br>Velocity/wk/store</div>
+              </div>
+              <div class="kpi-hero">
+                <div class="val" style="font-size:24px;">$35.73</div>
+                <div class="lbl">Total US Average<br>Velocity/wk/store</div>
+              </div>
+            </div>
+            <ul style="margin:0;padding:0 0 0 18px;font-size:13px;line-height:1.9;color:var(--dd-text);">
+              <li><strong>Wegmans has overtaken Walmart.</strong> At $120.08/week/store — up from $97 in June — Wegmans is now the hardest-working chain, more than 3× the national average.</li>
+              <li><strong>Walmart eased back to $99.57/wk/store</strong> (from a $126.41 June peak). Still nearly 3× the national average, but part of the same broad cooldown.</li>
+              <li><strong>Wakefern ($66.85) and ADUSA ($56.34)</strong> remain solidly above the national average.</li>
+              <li><strong>Kroger ($47.88) and Giant Eagle ($48.07)</strong> are essentially tied, both still below the national average — the clearest room-to-grow opportunity.</li>
+              <li><strong>The national average itself fell from $47.45 to $35.73</strong> — this cooldown is showing up broadly, not just at one retailer.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end mkt-sales-section -->
+
+  <!-- ══════════════ SUB-TAB 2: WHERE TO BUY ══════════════ -->
+  <div id="mkt-wtb-section" style="display:none">
+
+    <div class="note-info" style="border-left-color:var(--col-destini);color:#0F5B57;">
+      This is the "Where to Buy" widget embedded on dippindots.com/take-home — a shopper enters their zip code and it either surfaces nearby stores carrying the product (in-store) or links straight through to an online retailer (online). It's the closest signal we have to "someone actively trying to buy right now," short of an actual transaction.
+    </div>
+    <div class="stat-row">
+      <div class="stat-box"><div class="top-bar" style="background:var(--col-destini)"></div><div class="val">80,833</div><div class="lbl">Total Widget Visitors<br><span style="font-size:9px;color:var(--dd-muted);">Jan 1 – Aug 9, 2026</span></div></div>
+      <div class="stat-box"><div class="top-bar" style="background:var(--col-destini)"></div><div class="val">1.52%</div><div class="lbl">Online Checkout Rate<br><span style="font-size:9px;color:var(--dd-muted);">1,418 of 9,791 retailer clicks</span></div></div>
+      <div class="stat-box"><div class="top-bar" style="background:var(--col-destini)"></div><div class="val">70,175</div><div class="lbl">In-Store Successful Searches<br><span style="font-size:9px;color:var(--dd-muted);">of 71,176 total (98.6%)</span></div></div>
+      <div class="stat-box"><div class="top-bar" style="background:var(--col-destini)"></div><div class="val">23,825</div><div class="lbl">Store Detail Clicks<br><span style="font-size:9px;color:var(--dd-muted);">intent to visit a specific store</span></div></div>
+    </div>
+
+    <div class="detail-grid">
+      <div class="wow-chart-card">
+        <div class="wow-chart-head">
+          <div class="wow-chart-head-left">
+            <span class="wow-chart-title">Where Demand Isn't Being Met — By Flavor</span>
+            <span class="wow-chart-subtitle">Online "Product Not Found" vs. "Product Found" searches</span>
+          </div>
+        </div>
+        <div class="wow-chart-body">
+          <canvas id="destiniFlavorChart" height="240"></canvas>
+          <p style="font-size:11px;color:var(--dd-muted);margin:8px 0 0;font-weight:600;">The two legacy Sundae SKUs are easy to find (91% and 78% success). The newer Cups and Cool Mint Crunch are not — Cool Mint Crunch comes up empty 98% of the time someone searches for it. This is a distribution-gap story, not a media one.</p>
+        </div>
+      </div>
+      <div class="wow-chart-card">
+        <div class="wow-chart-head">
+          <div class="wow-chart-head-left">
+            <span class="wow-chart-title">Top States Searching</span>
+            <span class="wow-chart-subtitle">Online successful searches</span>
+          </div>
+        </div>
+        <div class="wow-chart-body">
+          <canvas id="destiniStateChart" height="240"></canvas>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end mkt-wtb-section -->
+
+  <!-- ══════════════ SUB-TAB 3: PROMOTIONS ══════════════ -->
+  <div id="mkt-promo-section" style="display:none">
+
+    <div class="note-info" style="border-left-color:var(--col-promo);color:#5B21B6;">
+      This section starts with the broad promotional environment across all retailers (ongoing, every month), then narrows into Ibotta — one specific program we have detailed redemption data for. As more programs like it run, they'll slot in below as additional case-study cards.
+    </div>
+
+    <div class="creative-section">
+      <div class="creative-section-header">
+        <div class="creative-section-title">
+          <span style="width:10px;height:10px;border-radius:50%;background:var(--col-promo);display:inline-block;"></span>
+          Retail Feature &amp; Coupon Activity
+        </div>
+        <span class="badge" style="background:#F5F3FF;color:#5B21B6;border-color:#E9D5FF;">Jan–Jul 2026 (Feb not available)</span>
+      </div>
+      <div class="detail-grid">
+        <div class="wow-chart-card" style="border-radius:14px;overflow:hidden;">
+          <div class="wow-chart-head">
+            <div class="wow-chart-head-left">
+              <span class="wow-chart-title">Monthly Retailer Ad/Coupon Placements</span>
+              <span class="wow-chart-subtitle">Weekly ads + digital coupons featuring Dippin' Dots</span>
+            </div>
+          </div>
+          <div class="wow-chart-body">
+            <canvas id="promoActivityChart" height="220"></canvas>
+          </div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-header" style="background:var(--col-promo)">
+            <div class="plat-icon">💡</div>
+            <div><h3>What This Tells Us</h3><div class="sub">Ties the sales cooldown to retail support</div></div>
+          </div>
+          <div class="detail-body">
+            <ul style="margin:0;padding:0 0 0 18px;font-size:13px;line-height:1.9;color:var(--dd-text);">
+              <li><strong>Retail promotional support surged right alongside wide distribution</strong> — from 13 placements in April to 433 in June, spanning 40 different retailers.</li>
+              <li><strong>June's surge was mostly digital</strong> (389 of 433 were web/digital-coupon placements, not print weekly-ad circulars) — worth knowing before assuming this was a print-circular push.</li>
+              <li><strong>July pulled back to 162 placements</strong> — still well above the spring baseline, but less than half June's level. This lines up with the same month the retail velocity and weekly sales numbers started softening.</li>
+              <li>This isn't proof of causation, but it's a plausible partial explanation: less retailer-funded promotional support in July may be part of why per-store velocity eased off its June high.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-caveat">
+      📋 <strong>Side note, not for the dashboard:</strong> the files in the "Numerator Promotion Data" folder are branded Numerator on the visible report pages, but their underlying file metadata identifies them as "FeatureVision® Report by Market Track, LLC." Doesn't affect the data's validity — likely a legacy template from a product rebrand/acquisition — just flagging in case the vendor name matters for your records.
+    </div>
+
+    <div class="creative-section">
+      <div class="creative-section-header">
+        <div class="creative-section-title">
+          <span style="width:10px;height:10px;border-radius:50%;background:var(--col-ibotta);display:inline-block;"></span>
+          Case Study — Ibotta Cashback Program
+        </div>
+        <span class="badge" style="background:#FDF2F8;color:#9D174D;border-color:#FBCFE8;">Completed · Jun 10 – Jul 30, 2026</span>
+      </div>
+
+      <div class="narrative-card" style="border-left:4px solid var(--col-ibotta);margin-bottom:24px;">
+        <div class="narrative-body">
+          <p>A $1.00-off, item-level Ibotta offer ran Jun 10 – Jul 30, 2026 (51 days live, now expired) at a total spend of <strong>$88,515.20</strong>. It moved <strong class="hl-green">44,480 units</strong> at a <strong class="hl-green">50.93% redemption rate</strong> — 4× the 12.67% Frozen Novelties category benchmark. Walmart drove 73.2% of redemptions.</p>
+          <p>The standout number: in a 3-month lookback, <strong class="hl-green">73% of redeemers had only purchased competitor brands</strong> in the frozen category beforehand — not existing Dippin' Dots buyers. Only 1% were already loyal to the brand. This is one of the clearest pieces of evidence anywhere in this data that media/promotion spend is winning trial from competitive buyers, not just rewarding people who'd buy anyway.</p>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="top-bar" style="background:var(--col-ibotta)"></div><div class="val">$88,515</div><div class="lbl">Total Offer Spend<br><span style="font-size:9px;color:var(--dd-muted);">51 days live</span></div></div>
+        <div class="stat-box"><div class="top-bar" style="background:var(--col-ibotta)"></div><div class="val">44,480</div><div class="lbl">Units Redeemed</div></div>
+        <div class="stat-box"><div class="top-bar" style="background:var(--col-ibotta)"></div><div class="val">50.93%</div><div class="lbl">Redemption Rate<br><span style="font-size:9px;color:var(--dd-good);font-weight:800;">4.0× category (12.67%)</span></div></div>
+        <div class="stat-box"><div class="top-bar" style="background:var(--col-ibotta)"></div><div class="val">73%</div><div class="lbl">Redeemers Were Competitive Buyers<br><span style="font-size:9px;color:var(--dd-muted);">3-mo lookback, Frozen Foods</span></div></div>
+      </div>
+
+      <div class="detail-grid">
+        <div class="wow-chart-card">
+          <div class="wow-chart-head">
+            <div class="wow-chart-head-left">
+              <span class="wow-chart-title">Redemptions by Retail Partner</span>
+            </div>
+          </div>
+          <div class="wow-chart-body">
+            <canvas id="ibottaRetailerChart" height="220"></canvas>
+          </div>
+        </div>
+        <div class="wow-chart-card">
+          <div class="wow-chart-head">
+            <div class="wow-chart-head-left">
+              <span class="wow-chart-title">Loyalty Breakout — Who Redeemed</span>
+              <span class="wow-chart-subtitle">3-month lookback · Frozen Foods category</span>
+            </div>
+          </div>
+          <div class="wow-chart-body">
+            <canvas id="ibottaLoyaltyChart" height="220"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end mkt-promo-section -->
+
 </div><!-- end tab-market -->
 
 <footer>
-  <div><strong>Kazoo Media</strong> · Dippin' Dots Spring/Summer 2026 Campaign · May 1 – August 16, 2026</div>
+  <div><strong>Kazoo Media</strong> · Dippin' Dots Spring/Summer 2026 Campaign · May 1 – August 23, 2026</div>
   <div style="margin-top:4px;">Sources: Meta Ads Manager · TikTok Ads Manager · Walmart Connect · Display (Custom/Carousel + Off Story)</div>
 </footer>
 </div>
@@ -1563,17 +1785,24 @@ function setDisplayTab(tab, btn) {
   document.querySelectorAll('#tab-display .sub-tab-btn').forEach(b => b.classList.remove('active'));
   if (btn) btn.classList.add('active');
 }
+function setMarketTab(tab, btn) {
+  document.getElementById('mkt-sales-section').style.display = tab === 'sales' ? '' : 'none';
+  document.getElementById('mkt-wtb-section').style.display   = tab === 'wtb'   ? '' : 'none';
+  document.getElementById('mkt-promo-section').style.display = tab === 'promo' ? '' : 'none';
+  document.querySelectorAll('#tab-market .sub-tab-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+}
 
 document.addEventListener('DOMContentLoaded', function() {
   
   new Chart(document.getElementById('wowMetaEng'), {
     type: 'line',
     data: {
-      labels: ['Jun 1–7', 'Jun 8–14', 'Jun 15–21', 'Jun 22–28', 'Jun 29–Jul 5', 'Jul 6–12', 'Jul 13–17', 'Jul 18–26', 'Jul 27–Aug 3', 'Aug 4–9', 'Aug 10–16'],
+      labels: ['Jun 1–7', 'Jun 8–14', 'Jun 15–21', 'Jun 22–28', 'Jun 29–Jul 5', 'Jul 6–12', 'Jul 13–17', 'Jul 18–26', 'Jul 27–Aug 3', 'Aug 4–9', 'Aug 10–16', 'Aug 17–23'],
       datasets: [
         {
           label: 'Eng Rate (weekly)',
-          data: [16.6, 17.8, 18.3, 17.4, 11.1, 23.4, 20.5, 16.3, 24.5, 21.2, 19.7],
+          data: [16.6, 17.8, 18.3, 17.4, 11.1, 23.4, 20.5, 16.3, 24.5, 21.2, 19.7, 19.7],
           yAxisID: 'y',
           borderColor: '#1877F2',
           backgroundColor: '#1877F222',
@@ -1583,7 +1812,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
           label: 'CPE (weekly)',
-          data: [0.11, 0.12, 0.13, 0.14, 0.11, 0.11, 0.11, 0.13, 0.11, 0.11, 0.13],
+          data: [0.11, 0.12, 0.13, 0.14, 0.11, 0.11, 0.11, 0.13, 0.11, 0.11, 0.13, 0.14],
           yAxisID: 'y1',
           borderColor: '#F45198',
           backgroundColor: '#F4519822',
@@ -1629,11 +1858,11 @@ document.addEventListener('DOMContentLoaded', function() {
   new Chart(document.getElementById('wowMetaTraffic'), {
     type: 'line',
     data: {
-      labels: ['Jun 1–7', 'Jun 8–14', 'Jun 15–21', 'Jun 22–28', 'Jun 29–Jul 5', 'Jul 6–12', 'Jul 13–17', 'Jul 18–26', 'Jul 27–Aug 3', 'Aug 4–9', 'Aug 10–16'],
+      labels: ['Jun 1–7', 'Jun 8–14', 'Jun 15–21', 'Jun 22–28', 'Jun 29–Jul 5', 'Jul 6–12', 'Jul 13–17', 'Jul 18–26', 'Jul 27–Aug 3', 'Aug 4–9', 'Aug 10–16', 'Aug 17–23'],
       datasets: [
         {
           label: 'CTR (weekly)',
-          data: [3.90, 4.17, 4.00, 3.80, 3.39, 2.89, 2.65, 2.74, 3.19, 3.53, 3.37],
+          data: [3.90, 4.17, 4.00, 3.80, 3.39, 2.89, 2.65, 2.74, 3.19, 3.53, 3.37, 3.38],
           yAxisID: 'y',
           borderColor: '#1877F2',
           backgroundColor: '#1877F222',
@@ -1643,7 +1872,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
           label: 'Landing Page Views',
-          data: [1641, 1474, 1435, 1318, 1537, 1464, 882, 1302, 1096, 908, 1004],
+          data: [1641, 1474, 1435, 1318, 1537, 1464, 882, 1302, 1096, 908, 1004, 967],
           yAxisID: 'y1',
           borderColor: '#3DB5E6',
           backgroundColor: '#3DB5E622',
@@ -1689,11 +1918,11 @@ document.addEventListener('DOMContentLoaded', function() {
   new Chart(document.getElementById('wowTikTok'), {
     type: 'line',
     data: {
-      labels: ['Jun 1–7', 'Jun 8–14', 'Jun 15–21', 'Jun 22–28', 'Jun 29–Jul 5', 'Jul 6–12', 'Jul 13–17', 'Jul 18–26', 'Jul 27–Aug 3', 'Aug 4–9', 'Aug 10–16'],
+      labels: ['Jun 1–7', 'Jun 8–14', 'Jun 15–21', 'Jun 22–28', 'Jun 29–Jul 5', 'Jul 6–12', 'Jul 13–17', 'Jul 18–26', 'Jul 27–Aug 3', 'Aug 4–9', 'Aug 10–16', 'Aug 17–23'],
       datasets: [
         {
           label: 'Impressions',
-          data: [327310, 379149, 358200, 319675, 375919, 323936, 179397, 406029, 257159, 293367, 378448],
+          data: [327310, 379149, 358200, 319675, 375919, 323936, 179397, 406029, 257159, 293367, 378448, 348523],
           yAxisID: 'y',
           borderColor: '#010101',
           backgroundColor: '#01010122',
@@ -1703,7 +1932,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
           label: 'CPM',
-          data: [1.88, 1.58, 1.79, 1.99, 1.42, 1.92, 2.26, 2.20, 2.10, 1.88, 1.86],
+          data: [1.88, 1.58, 1.79, 1.99, 1.42, 1.92, 2.26, 2.20, 2.10, 1.88, 1.86, 1.86],
           yAxisID: 'y1',
           borderColor: '#3DB5E6',
           backgroundColor: '#3DB5E622',
@@ -1749,11 +1978,11 @@ document.addEventListener('DOMContentLoaded', function() {
   new Chart(document.getElementById('wowWalmart'), {
     type: 'line',
     data: {
-      labels: ['Jun 1–7', 'Jun 8–14', 'Jun 15–21', 'Jun 22–28', 'Jun 29–Jul 6', 'Jul 7–12', 'Jul 13–17', 'Jul 18–26', 'Jul 27–Aug 3', 'Aug 4–9', 'Aug 10–16'],
+      labels: ['Jun 1–7', 'Jun 8–14', 'Jun 15–21', 'Jun 22–28', 'Jun 29–Jul 6', 'Jul 7–12', 'Jul 13–17', 'Jul 18–26', 'Jul 27–Aug 3', 'Aug 4–9', 'Aug 10–16', 'Aug 17–23'],
       datasets: [
         {
           label: 'ROAS',
-          data: [0.66, 1.43, 1.11, 1.85, 0.68, 0.98, 0.79, 0.84, 0.61, 0.55, 0.71],
+          data: [0.66, 1.43, 1.11, 1.85, 0.68, 0.98, 0.79, 0.84, 0.61, 0.55, 0.71, 0.70],
           yAxisID: 'y',
           borderColor: '#0071CE',
           backgroundColor: '#0071CE22',
@@ -1763,7 +1992,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
           label: 'Attributed Revenue',
-          data: [1722, 3297, 2656, 2693, 1552, 2728, 1333, 2425, 977, 590, 1741],
+          data: [1722, 3297, 2656, 2693, 1552, 2728, 1333, 2425, 977, 590, 1741, 2101],
           yAxisID: 'y1',
           borderColor: '#FFC220',
           backgroundColor: '#FFC22022',
@@ -1809,11 +2038,11 @@ document.addEventListener('DOMContentLoaded', function() {
   new Chart(document.getElementById('wowDisplayCustom'), {
     type: 'line',
     data: {
-      labels: ['Jun 1–7', 'Jun 8–14', 'Jun 15–21', 'Jun 22–28', 'Jun 29–Jul 5', 'Jul 6–12', 'Jul 13–17', 'Jul 18–26', 'Jul 27–Aug 3', 'Aug 4–9', 'Aug 10–16'],
+      labels: ['Jun 1–7', 'Jun 8–14', 'Jun 15–21', 'Jun 22–28', 'Jun 29–Jul 5', 'Jul 6–12', 'Jul 13–17', 'Jul 18–26', 'Jul 27–Aug 3', 'Aug 4–9', 'Aug 10–16', 'Aug 17–23'],
       datasets: [
         {
           label: 'CTR',
-          data: [0.068, 0.121, 0.140, 0.138, 0.294, 0.158, 0.059, 0.164, 0.191, 0.240, 0.301],
+          data: [0.068, 0.121, 0.140, 0.138, 0.294, 0.158, 0.059, 0.164, 0.191, 0.240, 0.301, 0.250],
           yAxisID: 'y',
           borderColor: '#FF6C00',
           backgroundColor: '#FF6C0022',
@@ -1823,7 +2052,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
           label: 'Total Clicks',
-          data: [823, 3249, 2430, 3198, 8711, 3401, 1808, 3832, 3830, 6853, 6414],
+          data: [823, 3249, 2430, 3198, 8711, 3401, 1808, 3832, 3830, 6853, 6414, 417],
           yAxisID: 'y1',
           borderColor: '#C2D600',
           backgroundColor: '#C2D60022',
@@ -1869,11 +2098,11 @@ document.addEventListener('DOMContentLoaded', function() {
   new Chart(document.getElementById('wowDisplayStory'), {
     type: 'line',
     data: {
-      labels: ['May 27–Jun 7', 'Jun 8–14', 'Jun 15–21', 'Jun 22–28', 'Jun 29–Jul 6', 'Jul 7–12', 'Jul 13–17', 'Jul 18–26', 'Jul 27–Aug 3', 'Aug 4–9', 'Aug 10–16'],
+      labels: ['May 27–Jun 7', 'Jun 8–14', 'Jun 15–21', 'Jun 22–28', 'Jun 29–Jul 6', 'Jul 7–12', 'Jul 13–17', 'Jul 18–26', 'Jul 27–Aug 3', 'Aug 4–9', 'Aug 10–16', 'Aug 17–23'],
       datasets: [
         {
           label: 'CTR',
-          data: [1.30, 1.19, 1.53, 1.46, 1.29, 1.42, 1.65, 1.58, 1.63, 1.40, 1.73],
+          data: [1.30, 1.19, 1.53, 1.46, 1.29, 1.42, 1.65, 1.58, 1.63, 1.40, 1.73, 2.19],
           yAxisID: 'y',
           borderColor: '#FF6C00',
           backgroundColor: '#FF6C0022',
@@ -1883,7 +2112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
           label: 'Click-Throughs',
-          data: [1514, 2255, 2152, 1981, 1830, 2385, 2456, 3450, 3649, 1992, 2076],
+          data: [1514, 2255, 2152, 1981, 1830, 2385, 2456, 3450, 3649, 1992, 2076, 1151],
           yAxisID: 'y1',
           borderColor: '#C2D600',
           backgroundColor: '#C2D60022',
@@ -1928,18 +2157,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // ── MARKET PERFORMANCE CHARTS ──
 
-  // Velocity trend
+  // Velocity trend — extended through Aug 19
   new Chart(document.getElementById('velocityChart'), {
     type: 'line',
     data: {
-      labels: ['Jan 25', 'Feb 22', 'Mar 22', 'Apr 19', 'May 17', 'Jun 14'],
+      labels: ['Jan 25', 'Feb 22', 'Mar 22', 'Apr 19', 'May 17', 'Jun 14', 'Jul 12', 'Aug 19'],
       datasets: [{
         label: 'Avg Weekly $/Store (Velocity)',
-        data: [15.09, 16.55, 20.85, 27.74, 35.09, 47.45],
+        data: [15.09, 16.55, 20.85, 27.74, 35.09, 47.45, 36.52, 35.73],
         borderColor: '#C2D600',
         backgroundColor: '#C2D60022',
-        pointBackgroundColor: ['#C2D600','#C2D600','#C2D600','#C2D600','#C2D600','#16A34A'],
-        pointRadius: [6,6,6,6,6,9],
+        pointBackgroundColor: ['#C2D600','#C2D600','#C2D600','#C2D600','#C2D600','#16A34A','#D97706','#D97706'],
+        pointRadius: [6,6,6,6,6,9,7,7],
         pointHoverRadius: 9,
         borderWidth: 2.5,
         tension: 0.3,
@@ -1965,18 +2194,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // ACV Distribution trend
+  // ACV Distribution trend — extended through Aug 19
   new Chart(document.getElementById('acvChart'), {
     type: 'line',
     data: {
-      labels: ['Jan 25', 'Feb 22', 'Mar 22', 'Apr 19', 'May 17', 'Jun 14'],
+      labels: ['Jan 25', 'Feb 22', 'Mar 22', 'Apr 19', 'May 17', 'Jun 14', 'Jul 12', 'Aug 19'],
       datasets: [{
         label: 'ACV Weighted Distribution %',
-        data: [16.98, 15.20, 16.55, 25.08, 26.39, 28.18],
+        data: [16.98, 15.20, 16.55, 25.08, 26.39, 28.18, 27.00, 26.24],
         borderColor: '#0048FF',
         backgroundColor: '#0048FF18',
-        pointBackgroundColor: ['#0048FF','#0048FF','#0048FF','#FF6C00','#FF6C00','#FF6C00'],
-        pointRadius: [6,6,6,9,9,9],
+        pointBackgroundColor: ['#0048FF','#0048FF','#0048FF','#FF6C00','#FF6C00','#FF6C00','#FF6C00','#FF6C00'],
+        pointRadius: [6,6,6,9,9,9,7,7],
         pointHoverRadius: 9,
         borderWidth: 2.5,
         tension: 0.3,
@@ -2001,15 +2230,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Weekly Sales Trend — Dollar Sales + Unit Sales (dual axis)
+  // Weekly Sales Trend — Dollar Sales + Unit Sales (dual axis) — extended through Aug 9
   new Chart(document.getElementById('weeklySalesChart'), {
     type: 'line',
     data: {
-      labels: ['Jan 4','Jan 11','Jan 18','Jan 25','Feb 1','Feb 8','Feb 15','Feb 22','Mar 1','Mar 8','Mar 15','Mar 22','Mar 29','Apr 5','Apr 12','Apr 19','Apr 26','May 3','May 10','May 17','May 24','May 31','Jun 7','Jun 14'],
+      labels: ['Jan 4','Jan 11','Jan 18','Jan 25','Feb 1','Feb 8','Feb 15','Feb 22','Mar 1','Mar 8','Mar 15','Mar 22','Mar 29','Apr 5','Apr 12','Apr 19','Apr 26','May 3','May 10','May 17','May 24','May 31','Jun 7','Jun 14','Jun 21','Jun 28','Jul 5','Jul 12','Jul 19','Jul 26','Aug 2','Aug 9'],
       datasets: [
         {
           label: 'Dollar Sales',
-          data: [151388, 154235, 162506, 171882, 131535, 163838, 168097, 164660, 181336, 208833, 238018, 245308, 242599, 260768, 361039, 443628, 423943, 443294, 451510, 511776, 803611, 770354, 779985, 709185],
+          data: [151388, 154235, 162506, 171882, 131535, 163838, 168097, 164660, 181336, 208833, 238018, 245308, 242599, 260768, 361039, 443628, 423943, 443294, 451510, 511776, 803611, 770354, 779985, 709185, 552600, 471145, 515170, 469775, 498600, 459700, 430848, 427023],
           yAxisID: 'y',
           borderColor: '#C2D600',
           backgroundColor: '#C2D60022',
@@ -2020,7 +2249,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
           label: 'Unit Sales',
-          data: [29064, 30651, 32235, 32688, 25462, 34163, 37161, 33403, 33982, 38308, 43220, 45200, 43632, 50071, 70386, 84903, 77764, 79788, 81482, 93951, 147827, 144099, 143891, 129672],
+          data: [29064, 30651, 32235, 32688, 25462, 34163, 37161, 33403, 33982, 38308, 43220, 45200, 43632, 50071, 70386, 84903, 77764, 79788, 81482, 93951, 147827, 144099, 143891, 129672, 101838, 86194, 94823, 88259, 97837, 85801, 78535, 77578],
           yAxisID: 'y1',
           borderColor: '#0048FF',
           backgroundColor: '#0048FF18',
@@ -2045,7 +2274,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       },
       scales: {
-        x: { grid: { color: 'rgba(0,19,56,.05)' }, ticks: { font: { size: 10, weight: 700 }, color: '#64748B', maxRotation: 0, autoSkip: true, maxTicksLimit: 12 } },
+        x: { grid: { color: 'rgba(0,19,56,.05)' }, ticks: { font: { size: 10, weight: 700 }, color: '#64748B', maxRotation: 0, autoSkip: true, maxTicksLimit: 14 } },
         y: {
           type: 'linear', position: 'left',
           grid: { color: 'rgba(0,19,56,.06)' },
@@ -2062,16 +2291,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Retailer velocity horizontal bar
+  // Retailer velocity horizontal bar — reordered, updated to Aug 19
   new Chart(document.getElementById('retailerVelocityChart'), {
     type: 'bar',
     data: {
-      labels: ['Walmart', 'Wegmans', 'Wakefern / ShopRite', 'ADUSA', 'Total US Avg', 'Kroger', 'Giant Eagle'],
+      labels: ['Wegmans', 'Walmart', 'Wakefern / ShopRite', 'ADUSA', 'Giant Eagle', 'Kroger', 'Total US Avg'],
       datasets: [{
         label: 'Avg Weekly $/Store',
-        data: [126.41, 97.07, 64.39, 51.64, 47.45, 44.84, 42.06],
-        backgroundColor: ['#0071CE33','#3DB5E633','#3DB5E633','#3DB5E633','#3DB5E633','#3DB5E633','#C2D60055'],
-        borderColor:     ['#0071CE',  '#3DB5E6',  '#3DB5E6',  '#3DB5E6',  '#3DB5E6',  '#3DB5E6',  '#C2D600'],
+        data: [120.08, 99.57, 66.85, 56.34, 48.07, 47.88, 35.73],
+        backgroundColor: ['#16A34A33','#0071CE33','#3DB5E633','#3DB5E633','#3DB5E633','#3DB5E633','#94A3B833'],
+        borderColor:     ['#16A34A',  '#0071CE',  '#3DB5E6',  '#3DB5E6',  '#3DB5E6',  '#3DB5E6',  '#94A3B8'],
         borderWidth: 2,
         borderRadius: 4,
       }]
@@ -2087,16 +2316,138 @@ document.addEventListener('DOMContentLoaded', function() {
         x: {
           grid: { color: 'rgba(0,19,56,.05)' },
           ticks: { font: { size: 11 }, color: '#64748B', callback: v => '$' + v },
-          suggestedMax: 140
+          suggestedMax: 135
         },
         y: { grid: { display: false }, ticks: { font: { size: 11, weight: 700 }, color: '#1a1a1a' } }
       }
     }
   });
 
-  // ── MOSAIC CHART ──
-  const mosaicLabels = ['Families in Motion','Power Elite','Promising Families','Singles & Starters','Flourishing Families','Suburban Style','Family Union','Booming w/ Confidence','Thriving Boomers','Autumn Years','Bourgeois Melting Pot','Significant Singles','Blue Sky Boomers'];
-  const mosaicData   = [189.0, 133.0, 131.0, 130.0, 125.0, 117.0, 106.0, 83.0, 83.0, 80.0, 77.0, 71.0, 69.0];
+  // Destini — flavor found vs not found
+  new Chart(document.getElementById('destiniFlavorChart'), {
+    type: 'bar',
+    data: {
+      labels: ['Cotton Candy Sundae','Cookies N Cream Sundae','Choc Chip Cookie Dough Cups','Cookies N Cream Cups','Banana Split Sundae','Cool Mint Crunch Sundae'],
+      datasets: [
+        { label: 'Found', data: [62709, 53664, 20285, 19703, 13755, 1431], backgroundColor: '#16A34A99', borderColor:'#16A34A', borderWidth:1, stack: 's' },
+        { label: 'Not Found', data: [6614, 15498, 47994, 48717, 55157, 67257], backgroundColor: '#DC262699', borderColor:'#DC2626', borderWidth:1, stack: 's' }
+      ]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      plugins: {
+        legend: { display: true, position: 'bottom', labels: { font: { size: 10, weight: 700 } } },
+        tooltip: { callbacks: { label: ctx => ' ' + ctx.dataset.label + ': ' + ctx.parsed.x.toLocaleString() } }
+      },
+      scales: {
+        x: { stacked: true, grid: { color: 'rgba(0,19,56,.05)' }, ticks: { font: { size: 10 }, color: '#64748B', callback: v => (v/1000)+'K' } },
+        y: { stacked: true, grid: { display: false }, ticks: { font: { size: 10, weight: 700 }, color: '#1a1a1a' } }
+      }
+    }
+  });
+
+  // Destini — top states
+  new Chart(document.getElementById('destiniStateChart'), {
+    type: 'bar',
+    data: {
+      labels: ['California','Texas','Florida','New York','Ohio','Illinois','Pennsylvania','Georgia','Virginia','Michigan'],
+      datasets: [{
+        label: 'Successful Searches',
+        data: [7578, 5076, 3917, 3629, 3191, 3019, 2752, 2436, 2266, 2129],
+        backgroundColor: '#00A7A133',
+        borderColor: '#00A7A1',
+        borderWidth: 2,
+        borderRadius: 4,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ' ' + ctx.parsed.x.toLocaleString() } } },
+      scales: {
+        x: { grid: { color: 'rgba(0,19,56,.05)' }, ticks: { font: { size: 10 }, color: '#64748B' } },
+        y: { grid: { display: false }, ticks: { font: { size: 11, weight: 700 }, color: '#1a1a1a' } }
+      }
+    }
+  });
+
+  // Ibotta — retailer breakdown
+  new Chart(document.getElementById('ibottaRetailerChart'), {
+    type: 'bar',
+    data: {
+      labels: ['Walmart', 'Doordash', 'Instacart', 'Appcard', 'Schnucks', 'Uber'],
+      datasets: [{
+        label: 'Redemptions',
+        data: [32559, 4536, 4031, 1597, 1107, 650],
+        backgroundColor: '#E01A7F33',
+        borderColor: '#E01A7F',
+        borderWidth: 2,
+        borderRadius: 4,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ' ' + ctx.parsed.x.toLocaleString() + ' (' + (ctx.parsed.x/44480*100).toFixed(1) + '%)' } } },
+      scales: {
+        x: { grid: { color: 'rgba(0,19,56,.05)' }, ticks: { font: { size: 10 }, color: '#64748B', callback: v => (v/1000)+'K' } },
+        y: { grid: { display: false }, ticks: { font: { size: 11, weight: 700 }, color: '#1a1a1a' } }
+      }
+    }
+  });
+
+  // Ibotta — loyalty breakout
+  new Chart(document.getElementById('ibottaLoyaltyChart'), {
+    type: 'bar',
+    data: {
+      labels: ['Loyalists', 'New to Category', 'Switchers', 'Competitive'],
+      datasets: [{
+        label: 'Share of Redemptions',
+        data: [1, 7, 19, 73],
+        backgroundColor: ['#F4519833','#FFD20033','#7C3AED33','#00A7A133'],
+        borderColor: ['#F45198','#FFD200','#7C3AED','#00A7A1'],
+        borderWidth: 2,
+        borderRadius: 4,
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ' ' + ctx.parsed.y + '%' } } },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 11, weight: 700 }, color: '#64748B' } },
+        y: { grid: { color: 'rgba(0,19,56,.05)' }, ticks: { font: { size: 10 }, color: '#64748B', callback: v => v + '%' }, suggestedMax: 80 }
+      }
+    }
+  });
+
+  // Numerator/Market Track — monthly promo activity
+  new Chart(document.getElementById('promoActivityChart'), {
+    type: 'bar',
+    data: {
+      labels: ['Jan', 'Feb (n/a)', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+      datasets: [{
+        label: 'Ad/Coupon Placements',
+        data: [48, null, 4, 13, 71, 433, 162],
+        backgroundColor: '#7C3AED33',
+        borderColor: '#7C3AED',
+        borderWidth: 2,
+        borderRadius: 4,
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ' ' + ctx.parsed.y + ' placements' } } },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 11, weight: 700 }, color: '#64748B' } },
+        y: { grid: { color: 'rgba(0,19,56,.05)' }, ticks: { font: { size: 10 }, color: '#64748B' } }
+      }
+    }
+  });
+
+  // ── MOSAIC CHART ── refreshed thru Jul 12, 2026
+  const mosaicLabels = ['Families in Motion','Flourishing Families','Power Elite','Singles and Starters','Suburban Style','Family Union','Promising Families','Thriving Boomers','Booming with Confidence','Significant Singles','Autumn Years','Pastoral Pride','Bourgeois Melting Pot','Blue Sky Boomers'];
+  const mosaicData   = [222, 122, 122, 120, 104, 98, 94, 92, 89, 86, 85, 80, 77, 77];
   const mosaicColors = mosaicData.map(v => v >= 100 ? '#16A34A33' : '#64748B18');
   const mosaicBorders= mosaicData.map(v => v >= 100 ? '#16A34A' : '#94A3B8');
 
@@ -2125,7 +2476,7 @@ document.addEventListener('DOMContentLoaded', function() {
           grid: { color: 'rgba(0,19,56,.05)' },
           ticks: { font: { size: 10 }, color: '#64748B' },
           suggestedMin: 60,
-          suggestedMax: 210
+          suggestedMax: 230
         },
         y: { grid: { display: false }, afterFit: ctx => { ctx.width = 160; }, ticks: { font: { size: 10, weight: 700 }, color: '#1a1a1a' } }
       }
